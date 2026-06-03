@@ -1,17 +1,22 @@
 /**
  * TRIAGE OS - Core Orchestrator (Layer 2)
  * 
- * Main orchestration engine that:
+ * Main orchestration engine with integrated Phase 2 Learning Loops:
  * 1. Loads pattern library
  * 2. Detects similar patterns
  * 3. Selects appropriate agents
  * 4. Executes agents in parallel
  * 5. Validates results
- * 6. Captures learning
+ * 6. Learning Loop v2: Updates agent weights
+ * 7. Rollback Loop: Handles failures
+ * 8. Captures learning & creates checkpoints
  */
 
 const fs = require('fs');
 const path = require('path');
+const LearningLoopV2 = require('./learning/learning-loop-v2');
+const RollbackLoop = require('./learning/rollback-loop');
+const WeightUpdater = require('./learning/weight-updater');
 
 class TRIAGEOS {
   constructor(config = {}) {
@@ -21,6 +26,7 @@ class TRIAGEOS {
       max_concurrent: 4,
       validation_required: true,
       learning_enabled: true,
+      phase2_enabled: true,
       ...config
     };
 
@@ -32,6 +38,13 @@ class TRIAGEOS {
       failed: 0,
       total_tokens: 0
     };
+
+    // Phase 2: Initialize learning systems
+    if (this.config.phase2_enabled) {
+      this.learning = new LearningLoopV2();
+      this.rollback = new RollbackLoop();
+      this.updater = new WeightUpdater();
+    }
 
     this.loadPatterns();
     this.loadBlocklist();
@@ -46,10 +59,10 @@ class TRIAGEOS {
       if (fs.existsSync(file)) {
         const data = fs.readFileSync(file, 'utf-8');
         this.patterns = JSON.parse(data) || [];
-        console.log(`✓ Loaded ${this.patterns.length} patterns`);
+        console.log(`[OK] Loaded ${this.patterns.length} patterns`);
       }
     } catch (error) {
-      console.warn('⚠️  Could not load patterns:', error.message);
+      console.warn('[WARN] Could not load patterns:', error.message);
       this.patterns = [];
     }
   }
@@ -63,22 +76,22 @@ class TRIAGEOS {
       if (fs.existsSync(file)) {
         const data = fs.readFileSync(file, 'utf-8');
         this.blocklist = JSON.parse(data) || [];
-        console.log(`✓ Loaded ${this.blocklist.length} blocklist entries`);
+        console.log(`[OK] Loaded ${this.blocklist.length} blocklist entries`);
       }
     } catch (error) {
-      console.warn('⚠️  Could not load blocklist:', error.message);
+      console.warn('[WARN] Could not load blocklist:', error.message);
       this.blocklist = [];
     }
   }
 
   /**
-   * Main orchestration flow
+   * Main orchestration flow with Phase 2 integration
    */
   async orchestrate(input) {
     const startTime = Date.now();
-    console.log('\n' + '═'.repeat(60));
-    console.log('🔄 TRIAGE OS - Orchestration Started');
-    console.log('═'.repeat(60) + '\n');
+    console.log('\n' + '='.repeat(60));
+    console.log('TRIAGE OS - Orchestration Started');
+    console.log('='.repeat(60) + '\n');
 
     try {
       // Layer 1: Input validation
@@ -86,15 +99,27 @@ class TRIAGEOS {
 
       // Layer 2: Pattern detection
       const similarPattern = this.findSimilarPattern(input.task);
+      const taskType = this.classifyTaskType(input.task);
       
       // Layer 2b: Blocklist check
       if (this.checkBlocklist(input.task)) {
-        throw new Error(`❌ BLOCKED: Pattern matches dangerous blocklist entry`);
+        throw new Error('BLOCKED: Pattern matches dangerous blocklist entry');
       }
 
-      // Layer 3: Agent selection
-      const selectedAgents = this.selectAgents(input, similarPattern);
-      console.log(`\n📋 Selected Agents: ${selectedAgents.join(', ')}`);
+      // Layer 3: Agent selection with Phase 2 weights
+      let selectedAgents = this.selectAgents(input, similarPattern);
+      
+      // Phase 2: Apply dynamic agent weights
+      if (this.config.phase2_enabled) {
+        const predicted = this.updater.predictBestAgents(taskType, selectedAgents.length);
+        console.log('\n[PHASE 2] Predicted best agents');
+        predicted.forEach(p => {
+          console.log(`   ${p.agent}: weight ${p.weight.toFixed(2)} (success rate: ${p.success_rate})`);
+        });
+        selectedAgents = predicted.map(p => p.agent);
+      }
+      
+      console.log(`\nSelected Agents: ${selectedAgents.join(', ')}`);
 
       // Layer 3: Parallel execution
       const agentResults = await this.executeAgentsParallel(selectedAgents, input);
@@ -103,12 +128,44 @@ class TRIAGEOS {
       const validation = await this.validateResults(agentResults, input);
       
       if (!validation.passed) {
+        // Phase 2: Rollback Loop on failure
+        if (this.config.phase2_enabled) {
+          console.log('\n[ERROR] Validation FAILED - Triggering Rollback Loop');
+          await this.rollback.handleFailure(input.task, selectedAgents, {
+            reason: validation.errors[0],
+            canRevert: true
+          });
+        }
         throw new Error(`Validation failed: ${validation.errors.join(', ')}`);
       }
 
-      console.log('\n✅ Validation PASSED');
+      console.log('\n[SUCCESS] Validation PASSED');
 
-      // Layer 5b: Learning loop
+      // Layer 5b: Phase 2 Learning Loop on success
+      const duration = (Date.now() - startTime) / 1000;
+      if (this.config.phase2_enabled && this.config.learning_enabled) {
+        console.log('\n[PHASE 2] Learning Loop v2');
+        this.learning.updateAgentWeights(selectedAgents, true, duration);
+        
+        // Update weight updater
+        selectedAgents.forEach(agent => {
+          this.updater.updateWeight(agent, taskType, true, duration);
+        });
+
+        // Analyze success
+        const analysis = this.learning.analyzeSuccess(input.task, selectedAgents, agentResults, duration);
+        console.log('   Success factors analyzed');
+        
+        // Refine pattern if exists
+        if (similarPattern) {
+          const refined = this.learning.refinePattern(similarPattern.id, this.patterns, true);
+          if (refined) {
+            this.savePatterns();
+          }
+        }
+      }
+
+      // Layer 5b: Original learning loop
       if (this.config.learning_enabled) {
         await this.capturePattern(input, agentResults, selectedAgents);
       }
@@ -116,13 +173,21 @@ class TRIAGEOS {
       // Layer 6: Checkpoint
       const checkpoint = await this.createCheckpoint(input, agentResults, validation);
 
-      const duration = Date.now() - startTime;
       this.metrics.total_cycles++;
       this.metrics.successful++;
       this.metrics.total_tokens += agentResults.totalTokens || 0;
 
-      console.log(`\n✨ Cycle completed in ${(duration / 1000).toFixed(1)}s`);
-      console.log(`📊 Total cycles: ${this.metrics.total_cycles}, Success: ${this.metrics.successful}\n`);
+      console.log(`\nCycle completed in ${duration.toFixed(1)}s`);
+      console.log(`Total cycles: ${this.metrics.total_cycles}, Success: ${this.metrics.successful}\n`);
+
+      // Phase 2: Learning stats
+      if (this.config.phase2_enabled) {
+        const stats = this.learning.getStats();
+        console.log('Learning Stats:');
+        console.log(`   Patterns: ${stats.total_learning_events}`);
+        console.log(`   Best agent: ${stats.most_reliable_agent.agent}`);
+        console.log(`   Trend: ${stats.learning_trend}`);
+      }
 
       return {
         status: 'SUCCESS',
@@ -130,7 +195,7 @@ class TRIAGEOS {
         validation,
         checkpoint,
         metrics: {
-          duration_ms: duration,
+          duration_ms: duration * 1000,
           agents_used: selectedAgents,
           total_tokens: agentResults.totalTokens
         }
@@ -138,7 +203,7 @@ class TRIAGEOS {
 
     } catch (error) {
       this.metrics.failed++;
-      console.error('\n❌ ORCHESTRATION FAILED:', error.message);
+      console.error('\n[ERROR] ORCHESTRATION FAILED:', error.message);
 
       return {
         status: 'FAILED',
@@ -151,38 +216,29 @@ class TRIAGEOS {
     }
   }
 
-  /**
-   * Validate input structure
-   */
   validateInput(input) {
     if (!input.task || typeof input.task !== 'string') {
       throw new Error('Invalid input: task must be a non-empty string');
     }
-    console.log(`📌 Task: ${input.task}`);
-    if (input.context) console.log(`📝 Context: ${input.context}`);
-    if (input.constraints) console.log(`🔒 Constraints: ${input.constraints.length} items`);
+    console.log(`Task: ${input.task}`);
+    if (input.context) console.log(`Context: ${input.context}`);
+    if (input.constraints) console.log(`Constraints: ${input.constraints.length} items`);
   }
 
-  /**
-   * Find similar pattern in library
-   */
   findSimilarPattern(task) {
     for (const pattern of this.patterns) {
       if (pattern.success_rate && pattern.success_rate > 0.8) {
         if (pattern.task_type === this.classifyTaskType(task)) {
-          console.log(`\n🎯 Found similar pattern: ${pattern.id}`);
+          console.log(`\nFound similar pattern: ${pattern.id}`);
           console.log(`   Success rate: ${(pattern.success_rate * 100).toFixed(1)}%`);
           return pattern;
         }
       }
     }
-    console.log(`\n🆕 No similar pattern found`);
+    console.log('\nNo similar pattern found');
     return null;
   }
 
-  /**
-   * Classify task type
-   */
   classifyTaskType(task) {
     const lower = task.toLowerCase();
     if (lower.includes('implement') || lower.includes('code')) return 'feature';
@@ -191,16 +247,13 @@ class TRIAGEOS {
     return 'general';
   }
 
-  /**
-   * Check if task matches blocklist
-   */
   checkBlocklist(task) {
     for (const entry of this.blocklist) {
       if (entry.auto_reject) {
         try {
           const regex = new RegExp(entry.pattern);
           if (regex.test(task)) {
-            console.log(`\n🚫 BLOCKLISTED: ${entry.id}`);
+            console.log(`\nBLOCKLISTED: ${entry.id}`);
             return true;
           }
         } catch (e) {
@@ -211,9 +264,6 @@ class TRIAGEOS {
     return false;
   }
 
-  /**
-   * Select agents based on task type
-   */
   selectAgents(input, pattern) {
     const taskType = this.classifyTaskType(input.task);
     
@@ -233,18 +283,15 @@ class TRIAGEOS {
     return agents;
   }
 
-  /**
-   * Execute agents in parallel
-   */
   async executeAgentsParallel(agentNames, input) {
-    console.log('\n⚡ Executing agents in PARALLEL...');
+    console.log('\nExecuting agents in PARALLEL...');
 
     const promises = agentNames.map(name => this.executeAgent(name, input));
     const results = await Promise.all(promises);
 
     const totalTokens = results.reduce((sum, r) => sum + (r.tokens || 0), 0);
 
-    console.log(`\n✓ All agents completed (${totalTokens} tokens)`);
+    console.log(`All agents completed (${totalTokens} tokens)`);
 
     return {
       agents: results,
@@ -252,11 +299,8 @@ class TRIAGEOS {
     };
   }
 
-  /**
-   * Execute individual agent
-   */
   async executeAgent(name, input) {
-    console.log(`  → ${name.toUpperCase()}`);
+    console.log(`  -> ${name.toUpperCase()}`);
     await new Promise(resolve => setTimeout(resolve, 100));
 
     return {
@@ -267,11 +311,8 @@ class TRIAGEOS {
     };
   }
 
-  /**
-   * Validation Gate (Layer 5)
-   */
   async validateResults(agentResults, input) {
-    console.log('\n🔍 VALIDATION GATE:');
+    console.log('\nVALIDATION GATE:');
 
     const checks = {
       agents_executed: !!agentResults?.agents?.length,
@@ -281,9 +322,9 @@ class TRIAGEOS {
 
     const allPassed = Object.values(checks).every(v => v);
 
-    console.log(`  ${checks.agents_executed ? '✓' : '✗'} Agents executed`);
-    console.log(`  ${checks.no_errors ? '✓' : '✗'} No errors`);
-    console.log(`  ${checks.blocklist_clean ? '✓' : '✗'} Blocklist clean`);
+    console.log(`  [${checks.agents_executed ? 'OK' : 'FAIL'}] Agents executed`);
+    console.log(`  [${checks.no_errors ? 'OK' : 'FAIL'}] No errors`);
+    console.log(`  [${checks.blocklist_clean ? 'OK' : 'FAIL'}] Blocklist clean`);
 
     return {
       passed: allPassed,
@@ -294,9 +335,6 @@ class TRIAGEOS {
     };
   }
 
-  /**
-   * Learning Loop (Layer 5b)
-   */
   async capturePattern(input, results, agentNames) {
     const taskType = this.classifyTaskType(input.task);
     
@@ -315,19 +353,20 @@ class TRIAGEOS {
     };
 
     this.patterns.push(newPattern);
+    this.savePatterns();
 
+    console.log(`Pattern captured: ${newPattern.id}`);
+  }
+
+  savePatterns() {
     try {
       const file = path.join(process.cwd(), '.claude/patterns/successes.json');
       fs.writeFileSync(file, JSON.stringify(this.patterns, null, 2));
-      console.log(`\n📚 Pattern captured: ${newPattern.id}`);
     } catch (error) {
-      console.warn('⚠️  Could not save pattern');
+      console.warn('[WARN] Could not save pattern');
     }
   }
 
-  /**
-   * Create Checkpoint (Layer 6)
-   */
   async createCheckpoint(input, results, validation) {
     const checkpoint = {
       timestamp: new Date().toISOString(),
@@ -335,7 +374,8 @@ class TRIAGEOS {
       status: 'VALIDATED',
       agents_executed: results.agents?.map(a => a.agent) || [],
       validations: validation.checks,
-      tokens_used: results.totalTokens || 0
+      tokens_used: results.totalTokens || 0,
+      phase2_enabled: this.config.phase2_enabled
     };
 
     try {
@@ -344,24 +384,36 @@ class TRIAGEOS {
       
       const filename = `checkpoint-${Date.now()}.json`;
       fs.writeFileSync(path.join(dir, filename), JSON.stringify(checkpoint, null, 2));
-      console.log(`📌 Checkpoint: ${filename}`);
+      console.log(`Checkpoint: ${filename}`);
     } catch (error) {
-      console.warn('⚠️  Could not save checkpoint');
+      console.warn('[WARN] Could not save checkpoint');
     }
 
     return checkpoint;
   }
 
-  /**
-   * Get metrics
-   */
   getMetrics() {
-    return {
+    const baseMetrics = {
       ...this.metrics,
       success_rate: (this.metrics.successful / (this.metrics.total_cycles || 1) * 100).toFixed(1) + '%',
       avg_tokens: Math.round(this.metrics.total_tokens / (this.metrics.total_cycles || 1)),
       patterns_learned: this.patterns.length
     };
+
+    if (this.config.phase2_enabled) {
+      const learningStats = this.learning.getStats();
+      const rollbackStats = this.rollback.getStats();
+      const updaterStats = this.updater.getReliabilityReport();
+
+      return {
+        ...baseMetrics,
+        learning: learningStats,
+        rollback: rollbackStats,
+        agent_reliability: updaterStats
+      };
+    }
+
+    return baseMetrics;
   }
 }
 
