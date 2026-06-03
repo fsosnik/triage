@@ -1,0 +1,61 @@
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build Output
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Testing
+.nyc_output/
+.jest-cache/
+*.coverage
+
+# Runtime
+.cache/
+temp/
+tmp/
+*.tmp
+
+# TRIAGE Specific
+.claude/checkpoints/*
+!.claude/checkpoints/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# Config (don't commit local settings)
+config/settings.json
+config/.env
+
+# Optional
+.DS_Store
+*.pem

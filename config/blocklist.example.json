@@ -1,0 +1,32 @@
+[
+  {
+    "id": "force-push",
+    "pattern": "git push --force*",
+    "severity": "CRÍTICO",
+    "reason": "Overwrites others' work - NEVER allowed",
+    "incidents": 0,
+    "auto_reject": true,
+    "alternative": "git push origin [branch] (normal)",
+    "created_at": "2026-06-03"
+  },
+  {
+    "id": "hardcoded-secrets",
+    "pattern": "(API_KEY|PASSWORD|SECRET)\\s*=\\s*['\"]",
+    "severity": "CRÍTICO",
+    "reason": "Credentials in code - security vulnerability",
+    "incidents": 0,
+    "auto_reject": true,
+    "alternative": "Use process.env.VARIABLE_NAME",
+    "created_at": "2026-06-03"
+  },
+  {
+    "id": "commit-without-tests",
+    "pattern": "git commit.*(?<!npm test)",
+    "severity": "WARNING",
+    "reason": "Commit without tests creates technical debt",
+    "incidents": 0,
+    "auto_reject": false,
+    "alternative": "npm test → pass before commit",
+    "created_at": "2026-06-03"
+  }
+]

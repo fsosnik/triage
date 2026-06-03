@@ -1,0 +1,22 @@
+[
+  {
+    "id": "foundation-setup",
+    "category": "infrastructure",
+    "task_type": "setup",
+    "agents": ["code_agent"],
+    "tools": ["npm", "git"],
+    "cost": 800,
+    "success_rate": 1.0,
+    "reuse_count": 0,
+    "execution_time_minutes": 10,
+    "last_used": null,
+    "created_at": "2026-06-03",
+    "template": {
+      "steps": [
+        "Initialize npm project",
+        "Install dependencies",
+        "Setup git hooks"
+      ]
+    }
+  }
+]

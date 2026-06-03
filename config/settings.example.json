@@ -1,0 +1,75 @@
+{
+  "project_name": "TRIAGE OS",
+  "version": "0.1.0",
+  "description": "Agentic & Self-Learning Operating System",
+  
+  "mode": "agentic",
+  
+  "model": {
+    "default": "claude-sonnet-4-6",
+    "code_agent": "claude-opus-4-6",
+    "other_agents": "claude-sonnet-4-6",
+    "max_tokens_per_call": 1024
+  },
+  
+  "agents": {
+    "enabled": ["code_agent", "qa_agent", "research_agent", "risk_agent"],
+    "parallelism": {
+      "enabled": true,
+      "max_concurrent": 4,
+      "timeout_seconds": 300
+    },
+    "weights": {
+      "code_agent": 0.8,
+      "qa_agent": 0.6,
+      "research_agent": 0.5,
+      "risk_agent": 0.7
+    }
+  },
+  
+  "validation": {
+    "required": true,
+    "checks": [
+      "tests_pass",
+      "build_clean",
+      "types_ok",
+      "git_clean",
+      "production_check"
+    ],
+    "production_check": {
+      "enabled": false,
+      "url": "https://api.example.com"
+    }
+  },
+  
+  "learning": {
+    "enabled": true,
+    "pattern_threshold": 0.8,
+    "auto_blocklist": true,
+    "weight_update_success": 0.1,
+    "weight_penalty_failure": 0.15
+  },
+  
+  "consumption": {
+    "mode": "minimal",
+    "cache_patterns": true,
+    "reuse_context": true,
+    "cache_control_ephemeral": true,
+    "max_tokens_per_cycle": 5000,
+    "max_tokens_per_month": 100000
+  },
+  
+  "checkpoint": {
+    "auto_create": true,
+    "save_location": ".claude/checkpoints",
+    "include_metrics": true,
+    "compress": false
+  },
+  
+  "logging": {
+    "level": "info",
+    "save_logs": true,
+    "log_location": "logs",
+    "max_log_size_mb": 10
+  }
+}

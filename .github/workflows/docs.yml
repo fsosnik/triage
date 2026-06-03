@@ -1,0 +1,73 @@
+name: 📚 Update Documentation
+
+on:
+  push:
+    paths:
+      - '.claude/patterns/**'
+      - 'src/**'
+      - 'docs/**'
+      - 'package.json'
+  workflow_dispatch:
+
+jobs:
+  update-docs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 📦 Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: 📚 Install Dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: ✨ Generate Documentation
+        run: npm run docs:generate
+        env:
+          CI: true
+
+      - name: 📝 Update Changelog
+        run: npm run update:changelog
+
+      - name: 🎯 Update README
+        run: npm run update:readme
+
+      - name: 🔍 Validate Documentation
+        run: npm run docs:validate
+
+      - name: 📤 Commit & Push
+        run: |
+          git config user.name "triage-bot"
+          git config user.email "bot@triage.ai"
+          
+          if [[ -z $(git status -s) ]]; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          
+          git add docs/ README.md CHANGELOG.md
+          git commit -m "docs: auto-update from patterns & code" --no-verify || true
+          git push origin main
+
+      - name: 📊 Report Metrics
+        run: npm run monitor:consumption
+        continue-on-error: true
+
+      - name: 💬 Slack Notification
+        if: always()
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          text: 'TRIAGE: Documentation auto-updated'
+          webhook_url: ${{ secrets.SLACK_WEBHOOK }}
+        continue-on-error: true
