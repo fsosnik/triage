@@ -17,6 +17,8 @@ const path = require('path');
 const LearningLoopV2 = require('./learning/learning-loop-v2');
 const RollbackLoop = require('./learning/rollback-loop');
 const WeightUpdater = require('./learning/weight-updater');
+const TokenOptimizer = require('./optimization/token-optimizer');
+const MetricsDashboard = require('./optimization/metrics-dashboard');
 
 class TRIAGEOS {
   constructor(config = {}) {
@@ -44,6 +46,8 @@ class TRIAGEOS {
       this.learning = new LearningLoopV2();
       this.rollback = new RollbackLoop();
       this.updater = new WeightUpdater();
+    this.optimizer = new TokenOptimizer();
+    this.dashboard = new MetricsDashboard();
     }
 
     this.loadPatterns();
