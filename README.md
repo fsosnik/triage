@@ -48,6 +48,64 @@ Layer 1: Input (Task, Context, Constraints)
 
 ## Key Features
 
+
+## Architecture Overview
+
+![TRIAGE OS Architecture](docs/architecture-diagram.png)
+
+### Sistema Operativo Agentico Autoaprendiz
+
+TRIAGE OS es un sistema de orquestación de agentes especializados que valida evidencia, aprende de fallos y evoluciona automáticamente.
+
+**Principio Rector**: La verdad está en la evidencia, no en la predicción.
+- Producción real > Predicción
+- Output ejecutado > Intención
+- Resultado medido > Suposición
+- Git > Documentación
+
+### Arquitectura de 7 Capas
+
+1. **Core OS** — Orquestador central que enruta tareas, valida evidencia, aprende
+2. **4 Agentes Paralelo** — Code, QA, Research, Risk
+3. **Execution Layer** — Git, Bash, Tests, Lint, Build, APIs
+4. **Validation Gate** — Verdad del proyecto (VALID / ROLLBACK)
+5. **Learning Loop** — Captura patrones de éxito
+6. **Checkpoint** — Git status, validaciones, producción
+7. **Knowledge Base** — Pattern Library + Blocklist Dinámico
+
+### Agentes Especializados
+
+- **Code Agent**: Validación, tests, build
+- **QA Agent**: Bugs, seguridad, edge cases
+- **Research Agent**: Contexto, best practices
+- **Risk Agent**: Impacto, rollback, contingencia
+
+Ejecutan en **paralelo** → máxima calidad en tiempo mínimo
+
+---
+
+## Implemented Phases (0-14)
+
+| Fase | Componente | Status |
+|------|-----------|--------|
+| 0 | Setup | ✓ |
+| 1 | Core OS | ✓ |
+| 2 | Learning Loops | ✓ |
+| 3 | Token Optimization | ✓ |
+| 4 | Scale (Multi-tenant) | ✓ |
+| 5 | Observability | ✓ |
+| 6 | Deployment & CI/CD | ✓ |
+| 7 | Auto-Tuning | ✓ |
+| 8 | Integrations | ✓ |
+| 9 | Analytics | ✓ |
+| 10 | Security | ✓ |
+| 11 | Knowledge Management | ✓ |
+| 12 | REST API Server | ✓ |
+| 13 | CLI Tools | ✓ |
+| 14 | Performance Benchmarking | ✓ |
+
+---
+
 - **Agentic**: 4 specialized agents working in parallel
 - **Self-Learning**: Dynamic weight updates, pattern refinement
 - **Optimized**: 75% token reduction, pattern compression
