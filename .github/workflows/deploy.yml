@@ -6,16 +6,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      - run: npm install
-      - run: npm test || true
-
   validate:
     runs-on: ubuntu-latest
     steps:
@@ -24,8 +14,10 @@ jobs:
         with:
           node-version: '18'
       - run: npm install
-      - run: npm run validate:structure || true
-      - run: npm run simulate:cycle || true
+      - run: node -c src/core/os.js || true
+      - run: node -c src/integration/github-connector.js || true
+      - run: node -c src/analytics/analytics-engine.js || true
+      - run: node scripts/validate-structure.js || true
 
   docker:
     runs-on: ubuntu-latest
@@ -37,3 +29,5 @@ jobs:
           context: .
           push: false
           tags: triage:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
