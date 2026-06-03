@@ -14,11 +14,11 @@
 
 const fs = require('fs');
 const path = require('path');
-const LearningLoopV2 = require('./learning/learning-loop-v2');
-const RollbackLoop = require('./learning/rollback-loop');
-const WeightUpdater = require('./learning/weight-updater');
-const TokenOptimizer = require('./optimization/token-optimizer');
-const MetricsDashboard = require('./optimization/metrics-dashboard');
+const LearningLoopV2 = require('../learning/learning-loop-v2');
+const RollbackLoop = require('../learning/rollback-loop');
+const WeightUpdater = require('../learning/weight-updater');
+const TokenOptimizer = require('../optimization/token-optimizer');
+const MetricsDashboard = require('../optimization/metrics-dashboard');
 
 class TRIAGEOS {
   constructor(config = {}) {

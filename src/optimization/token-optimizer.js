@@ -55,7 +55,7 @@ class TokenOptimizer {
 
     const original = JSON.stringify(patterns);
     const compressedStr = JSON.stringify(compressed);
-    this.metrics.compression_ratio = ((1 - compressedStr.length / original.length) * 100).toFixed(1);
+    this.metrics.compression_ratio = parseFloat(((1 - compressedStr.length / original.length) * 100).toFixed(1));
 
     return compressedStr;
   }
