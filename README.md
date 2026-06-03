@@ -10,7 +10,7 @@
 
 ---
 
-## 🎯 TRIAGE: ¿Qué es?
+##  TRIAGE: ¿Qué es?
 
 **TRIAGE** = Trinity (3) + Agile + Classification
 
@@ -23,7 +23,7 @@ En medicina, triage clasifica pacientes por urgencia. En TRIAGE OS:
 
 ---
 
-## ⚡ Características Principales
+##  Características Principales
 
 | Feature | Benefit |
 |---------|---------|
@@ -38,7 +38,7 @@ En medicina, triage clasifica pacientes por urgencia. En TRIAGE OS:
 
 ---
 
-## 📊 Consumo Esperado
+##  Consumo Esperado
 
 ```
 SIN OPTIMIZAR:           CON TRIAGE:
@@ -53,7 +53,7 @@ AHORRO: 78% 🎉
 
 ---
 
-## 🚀 Quick Start (5 minutes)
+##  Quick Start (5 minutes)
 
 ### 1. Clone & Install
 ```bash
@@ -90,7 +90,7 @@ npm run validate:structure
 
 ---
 
-## 🏗️ Architecture: 7 Layers
+##  Architecture: 7 Layers
 
 ```
 ┌──────────────────────────────────────┐
@@ -122,7 +122,7 @@ npm run validate:structure
 
 ---
 
-## 🧠 4 Specialized Agents
+##  4 Specialized Agents
 
 ### Code Agent
 - **Implementación** + Testing
@@ -152,7 +152,7 @@ npm run validate:structure
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 triage/
@@ -173,7 +173,7 @@ triage/
 
 ---
 
-## 🔧 Tools & Integrations
+##  Tools & Integrations
 
 ### Priority 1: Essential (Week 1)
 - ✅ GitHub API — Git operations
@@ -194,7 +194,7 @@ triage/
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 | Document | Time | Content |
 |----------|------|---------|
@@ -207,7 +207,7 @@ triage/
 
 ---
 
-## 🚀 4-Week Roadmap
+##  4-Week Roadmap
 
 ### Week 1: Foundation
 ```bash
@@ -247,7 +247,7 @@ npm run phase:4
 
 ---
 
-## 📊 Metrics
+##  Metrics
 
 ```bash
 # Monitor consumption
@@ -268,7 +268,7 @@ npm run
 
 ---
 
-## 🎯 Success Metrics (Month 1)
+##  Success Metrics (Month 1)
 
 - [ ] Repo pushed to GitHub
 - [ ] npm install works without errors
@@ -279,7 +279,7 @@ npm run
 
 ---
 
-## 🔐 Security
+##  Security
 
 ✅ `.env` in `.gitignore` — Never commit secrets  
 ✅ API keys in environment variables  
@@ -290,7 +290,7 @@ npm run
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork → Branch → Commit → PR
 2. **Maintain evidence-driven principle**
@@ -299,7 +299,7 @@ npm run
 
 ---
 
-## 📞 Support
+##  Support
 
 - **Issues**: GitHub Issues
 - **Discussions**: GitHub Discussions
@@ -307,13 +307,13 @@ npm run
 
 ---
 
-## 📄 License
+##  License
 
 MIT — Free to use, modify, distribute.
 
 ---
 
-## 🎓 What You'll Learn
+##  What You'll Learn
 
 ✅ Agentic system design  
 ✅ API consumption optimization  
@@ -324,7 +324,7 @@ MIT — Free to use, modify, distribute.
 
 ---
 
-## 🙏 Credits
+##  Credits
 
 **Trinity** — Inspired by my daughter  
 **TRIAGE** — Medical classification paradigm for AI  
@@ -339,7 +339,7 @@ MIT — Free to use, modify, distribute.
 
 ---
 
-## 🚀 Ready?
+##  Ready?
 
 ```bash
 1. git clone https://github.com/fsosnik/triage.git
