@@ -1,0 +1,43 @@
+{
+  "environments": {
+    "development": {
+      "port": 3000,
+      "log_level": "debug",
+      "cache_enabled": true,
+      "phase2": true,
+      "phase3": true,
+      "phase4": false,
+      "phase5": true
+    },
+    "staging": {
+      "port": 3000,
+      "log_level": "info",
+      "cache_enabled": true,
+      "phase2": true,
+      "phase3": true,
+      "phase4": true,
+      "phase5": true
+    },
+    "production": {
+      "port": 3000,
+      "log_level": "warn",
+      "cache_enabled": true,
+      "phase2": true,
+      "phase3": true,
+      "phase4": true,
+      "phase5": true,
+      "monitoring": true,
+      "backup_enabled": true
+    }
+  },
+  "healthcheck": {
+    "enabled": true,
+    "interval_seconds": 30,
+    "timeout_seconds": 10
+  },
+  "backup": {
+    "enabled": true,
+    "frequency": "daily",
+    "retention_days": 30
+  }
+}
