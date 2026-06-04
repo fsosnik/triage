@@ -69,3 +69,6 @@ config/.env
 
 # Keep patterns.json (learned knowledge)
 !.claude/knowledge/patterns.json
+
+# Allow checkpoints (learned state)
+!.claude/checkpoints/
