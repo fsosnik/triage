@@ -29,9 +29,10 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.28.0",
-    "@octokit/rest": "^21.0.0",
     "@notionhq/client": "^2.2.0",
+    "@octokit/rest": "^21.0.0",
     "dotenv": "^16.0.0",
+    "graphify": "^1.0.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {

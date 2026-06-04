@@ -59,3 +59,13 @@ config/.env
 # Optional
 .DS_Store
 *.pem
+
+# Generated data (auto-managed by system)
+.claude/analytics/events.json
+.claude/knowledge/failures.json
+.claude/knowledge/insights.json
+.claude/security/audit-log.json
+.claude/cli-config.json
+
+# Keep patterns.json (learned knowledge)
+!.claude/knowledge/patterns.json
