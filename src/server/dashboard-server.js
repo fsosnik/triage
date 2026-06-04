@@ -1,12 +1,12 @@
 const express = require('express');
 const WebSocket = require('ws');
 const fs = require('fs');
-const GraphifyAdapter = require('../optimization/graphify-adapter');
+const GraphifyCompression = require('../optimization/graphify-compression');
 
 class DashboardServer {
   constructor(port = 3000) {
     this.app = express();
-    this.gf = new GraphifyAdapter();
+    this.gf = new GraphifyCompression();
     this.port = port;
     this.clients = new Set();
   }
@@ -15,7 +15,7 @@ class DashboardServer {
     this.app.get('/api/metrics', (req, res) => {
       const events = this.loadEvents();
       const compressed = this.gf.compressEvents(events);
-      res.json({ data: compressed, compression: '59%' });
+      res.json({ data: compressed, compression: 'graphify' });
     });
 
     this.app.get('/api/patterns', (req, res) => {
