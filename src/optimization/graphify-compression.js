@@ -1,37 +1,20 @@
-const Graphify = require('graphify');
-
 class GraphifyCompression {
-  constructor() {
-    this.gf = new Graphify();
-  }
-
-  // Usar Graphify para comprimir eventos
   compressEvents(events) {
-    return events.map(e => 
-      this.gf.graph({
-        event: e.type,
-        success: e.data.success,
-        tokens: e.data.tokens,
-        time: e.data.duration_ms
-      }).compress()
-    );
+    return events.map(e => ({
+      t: e.type[0],
+      ts: Math.floor(new Date(e.timestamp).getTime() / 1000),
+      s: e.data.success ? 1 : 0,
+      tk: e.data.tokens,
+      d: e.data.duration_ms
+    }));
   }
-
-  // Usar Graphify para comprimir patterns
   compressPatterns(patterns) {
-    return patterns.map(p =>
-      this.gf.graph({
-        id: p.id,
-        rate: p.success_rate,
-        agents: p.agents,
-        exec_time: p.execution_time
-      }).compress()
-    );
-  }
-
-  decompress(compressed) {
-    return this.gf.decompress(compressed);
+    return patterns.map(p => ({
+      id: p.id,
+      sr: (p.success_rate * 100) | 0,
+      a: p.agents.join(','),
+      t: p.execution_time
+    }));
   }
 }
-
 module.exports = GraphifyCompression;
