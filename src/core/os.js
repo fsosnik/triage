@@ -258,14 +258,13 @@ class TRIAGEOS {
       }
     }
     console.log('\nNo similar pattern found');
-    return null;
-  }
-
   classifyTaskType(task) {
     const lower = task.toLowerCase();
+    if (lower.includes('refactor')) return 'refactor';
     if (lower.includes('implement') || lower.includes('code')) return 'feature';
     if (lower.includes('fix') || lower.includes('bug')) return 'bugfix';
-    if (lower.includes('refactor')) return 'refactor';
+    return 'general';
+  }
     return 'general';
   }
 
