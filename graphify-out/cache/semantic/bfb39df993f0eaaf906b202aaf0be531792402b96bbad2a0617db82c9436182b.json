@@ -1,0 +1,1 @@
+{"nodes": [{"id": "src_github_connector", "label": "GitHub Connector", "file_type": "code", "source_file": "src/integration/github-connector.js", "source_location": null, "source_url": null, "captured_at": null, "author": "fsosnik", "contributor": null}], "edges": [], "hyperedges": []}

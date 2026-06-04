@@ -1,0 +1,1 @@
+{"nodes": [{"id": "src_api_gateway", "label": "API Gateway", "file_type": "code", "source_file": "src/scale/api-gateway.js", "source_location": null, "source_url": null, "captured_at": null, "author": "fsosnik", "contributor": null}], "edges": [], "hyperedges": []}
