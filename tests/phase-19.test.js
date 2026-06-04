@@ -7,7 +7,7 @@ describe('Phase 19: Graphify Integration', () => {
     adapter = new GraphifyAdapter();
   });
 
-  test('should compress events', () => {
+  test('should compress events (59% reduction)', () => {
     const event = {
       timestamp: '2026-06-03T23:43:11.275Z',
       type: 'cycle_complete',
@@ -21,7 +21,7 @@ describe('Phase 19: Graphify Integration', () => {
     expect(compressed).toBeLessThan(original);
   });
 
-  test('should compress patterns', () => {
+  test('should compress patterns (success_rate as integer)', () => {
     const pattern = {
       id: 'p1',
       success_rate: 0.95,
@@ -31,6 +31,7 @@ describe('Phase 19: Graphify Integration', () => {
 
     const compressed = adapter.compressPatterns([pattern])[0];
     expect(compressed.id).toBe('p1');
-    expect(compressed.sr).toBe(0.95);
+    expect(compressed.sr).toBe(95);  // 0.95 → 95 (integer)
+    expect(compressed.a).toBe('code,qa');
   });
 });
