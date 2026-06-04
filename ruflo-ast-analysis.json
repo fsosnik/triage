@@ -1,0 +1,33 @@
+[INFO] Analyzing: src/
+
+... Parsing AST...                        [INFO] Found 56 source files
+... Parsing AST...                        + AST Analysis Summary +
+| Files analyzed: 56   |
+| Functions: 333       |
+| Classes: 59          |
+| Total LOC: 4009      |
+| Avg Complexity: 6    |
++----------------------+
+
+Complexity by File
+------------------------------------------------------------
++------------------------------------------+-------+-------+-----+--------------+
+| File                                     | Cyclo | Cogni | LOC | Rating       |
++------------------------------------------+-------+-------+-----+--------------+
+| ...calProjects/Projects/triage/src/co... |    35 |   109 | 359 | Very Complex |
+| ...jects/triage/src/learning/rollback... |    27 |    63 | 253 | Very Complex |
+| .../Projects/triage/src/analytics/ins... |    15 |    38 |  60 | Complex      |
+| ...ts/triage/src/learning/learning-lo... |    14 |    31 | 193 | Complex      |
+| ...ects/triage/src/learning/weight-up... |    13 |    34 | 203 | Complex      |
+| ...s/triage/src/analytics/analytics-e... |     9 |    18 |  98 | Moderate     |
+| ...iage/src/optimization/metrics-dash... |     9 |    18 |  94 | Moderate     |
+| ...cts/triage/src/knowledge/knowledge... |     8 |    19 | 138 | Moderate     |
+| ...triage/src/optimization/token-opti... |     8 |    17 | 183 | Moderate     |
+| ...rc/integration/integration-orchest... |     7 |    18 |  53 | Moderate     |
+| ...ojects/triage/src/plugins/plugin-l... |     7 |    15 |  43 | Moderate     |
+| ...jects/triage/src/plugins/plugin-ma... |     7 |    21 |  44 | Moderate     |
+| .../Projects/triage/src/scale/multi-t... |     7 |    14 |  80 | Moderate     |
+| ...rojects/Projects/triage/src/tools/... |     7 |     4 |  95 | Moderate     |
+| .../triage/src/tuning/performance-pro... |     7 |    16 |  61 | Moderate     |
++------------------------------------------+-------+-------+-----+--------------+
+  ... and 41 more files
