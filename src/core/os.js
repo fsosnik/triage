@@ -10,7 +10,6 @@ const LearningLoopV2 = require('../learning/learning-loop-v2');
 const RollbackLoop = require('../learning/rollback-loop');
 const WeightUpdater = require('../learning/weight-updater');
 const TokenOptimizer = require('../optimization/token-optimizer');
-const GraphifyAdapter = require('../optimization/graphify-adapter');
 const RufloOptimizer = require('../optimization/ruflo-optimizer');
 const MetricsDashboard = require('../optimization/metrics-dashboard');
 
