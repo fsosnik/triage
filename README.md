@@ -20,7 +20,7 @@ cp .env.example .env
 
 # 3. Run
 npm start
-open http://localhost:3001
+open http://localhost:3000
 ```
 
 📖 **Full docs**: [docs/guides/QUICKSTART.md](docs/guides/QUICKSTART.md)
