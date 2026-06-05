@@ -248,5 +248,165 @@
     "failure_reason": "test",
     "failure_type": "test_failure",
     "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T16:11:02.669Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T16:11:03.252Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T16:22:32.087Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T16:22:32.107Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T16:22:56.042Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T16:22:56.071Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T16:23:13.499Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T16:23:13.547Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T18:12:50.009Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T18:12:50.029Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T18:15:39.231Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T18:15:39.277Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T18:16:08.903Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T18:16:09.014Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T18:18:26.405Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T18:18:26.473Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
   }
 ]

@@ -282,14 +282,26 @@ class TRIAGEOS {
 
   async executeAgent(name, input) {
     console.log(`  -> ${name.toUpperCase()}`);
-    await new Promise(resolve => setTimeout(resolve, 100));
+    try {
+      const { LLMProviderFactory } = require('./providers/LLMProviderFactory');
+      const provider = LLMProviderFactory.create(process.env.TRIAGE_PROVIDER || 'anthropic', {
+        apiKey: process.env.ANTHROPIC_API_KEY || process.env.OPENAI_API_KEY || process.env.GOOGLE_API_KEY
+      });
 
-    return {
-      agent: name,
-      status: 'success',
-      tokens: Math.floor(Math.random() * 500) + 200,
-      timestamp: new Date().toISOString()
-    };
+      const agentPrompt = `You are a ${name} agent. Task: ${input.task}. Context: ${input.context || ''}`;
+      const result = await provider.chat([{ role: 'user', content: agentPrompt }], { max_tokens: 512 });
+
+      return {
+        agent: name,
+        status: 'success',
+        content: result.content,
+        tokens: result.tokens.total || 0,
+        timestamp: new Date().toISOString()
+      };
+    } catch (error) {
+      console.warn(`[${name}] Provider error:`, error.message);
+      return { agent: name, status: 'fallback', tokens: 100, timestamp: new Date().toISOString() };
+    }
   }
 
   async validateResults(agentResults, input) {

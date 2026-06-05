@@ -2,7 +2,7 @@
  * Phase 10: Authentication & Authorization
  */
 
-const crypto = require('crypto');
+const bcrypt = require('bcrypt');
 
 class AuthManager {
   constructor() {
@@ -11,7 +11,7 @@ class AuthManager {
   }
 
   createUser(username, password) {
-    const hash = crypto.createHash('sha256').update(password).digest('hex');
+    const hash = await bcrypt.hash(password, 10);
     const user = {
       id: crypto.randomBytes(8).toString('hex'),
       username,
@@ -24,7 +24,7 @@ class AuthManager {
   }
 
   authenticate(username, password) {
-    const hash = crypto.createHash('sha256').update(password).digest('hex');
+    const hash = await bcrypt.hash(password, 10);
     for (const user of this.users.values()) {
       if (user.username === username && user.password_hash === hash) {
         const token = crypto.randomBytes(32).toString('hex');

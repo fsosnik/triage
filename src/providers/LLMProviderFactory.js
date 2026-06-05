@@ -25,3 +25,6 @@ export class LLMProviderFactory {
     return Object.keys(this.providers);
   }
 }
+
+module.exports = { LLMProviderFactory };
+module.exports = { LLMProviderFactory };" >> ~/LocalProjects/Projects/triage/src/providers/LLMProviderFactory.js
