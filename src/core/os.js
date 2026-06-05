@@ -13,7 +13,7 @@
  */
 
 const fs = require('fs');
-const path = require('path');npm test 2>&1 | grep "Tests:"
+const path = require('path');
 const LearningLoopV2 = require('../learning/learning-loop-v2');
 const RollbackLoop = require('../learning/rollback-loop');
 const WeightUpdater = require('../learning/weight-updater');
