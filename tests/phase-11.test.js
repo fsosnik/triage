@@ -3,7 +3,6 @@ const LearningArchive = require('../src/knowledge/learning-archive');
 const KnowledgeExporter = require('../src/knowledge/export-knowledge');
 
 describe('Phase 11: Knowledge Management', () => {
-  
   test('KnowledgeBase should capture insights', () => {
     const kb = new KnowledgeBase();
     const insight = kb.captureInsight('Tip', 'Content', 'optimization', 0.9);
@@ -12,6 +11,7 @@ describe('Phase 11: Knowledge Management', () => {
 
   test('should capture patterns', () => {
     const kb = new KnowledgeBase();
+    kb.patterns = [];
     kb.capturePattern('p1', 0.95, ['code', 'qa'], 100);
     expect(kb.patterns.length).toBe(1);
   });
