@@ -1,9 +1,9 @@
-const AnthropicProvider = require('./AnthropicProvider');
-const OpenAIProvider = require('./OpenAIProvider');
-const GeminiProvider = require('./GeminiProvider');
-const OllamaProvider = require('./OllamaProvider');
+import { AnthropicProvider } from './AnthropicProvider.js';
+import { OpenAIProvider } from './OpenAIProvider.js';
+import { GeminiProvider } from './GeminiProvider.js';
+import { OllamaProvider } from './OllamaProvider.js';
 
-class LLMProviderFactory {
+export class LLMProviderFactory {
   static providers = {
     anthropic: AnthropicProvider,
     claude: AnthropicProvider,
@@ -15,25 +15,13 @@ class LLMProviderFactory {
     llama: OllamaProvider
   };
 
-  static create(providerName, config = {}) {
-    const ProviderClass = this.providers[providerName.toLowerCase()];
-    if (!ProviderClass) {
-      throw new Error(
-        `Unknown provider: ${providerName}. Available: ${Object.keys(this.providers).join(', ')}`
-      );
-    }
-    return new ProviderClass(config);
-  }
-
-  static async createAndValidate(providerName, config = {}) {
-    const provider = this.create(providerName, config);
-    await provider.validate();
-    return provider;
+  static create(name, config) {
+    const Provider = this.providers[name.toLowerCase()];
+    if (!Provider) throw new Error(`Unknown provider: ${name}`);
+    return new Provider(config);
   }
 
   static listProviders() {
     return Object.keys(this.providers);
   }
 }
-
-module.exports = LLMProviderFactory;

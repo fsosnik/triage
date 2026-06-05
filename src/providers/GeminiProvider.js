@@ -1,6 +1,6 @@
-const LLMProvider = require('./LLMProvider');
+import { LLMProvider } from './LLMProvider.js';
 
-class GeminiProvider extends LLMProvider {
+export class GeminiProvider extends LLMProvider {
   constructor(config = {}) {
     super(config);
     this.model = config.model || 'gemini-2.0-pro';
@@ -39,18 +39,12 @@ class GeminiProvider extends LLMProvider {
     const text = response.response.text();
     return {
       content: text,
-      tokens: {
-        input: text.split(/\s+/).length * 1.3,
-        output: text.split(/\s+/).length,
-        total: text.split(/\s+/).length * 2.3
-      },
+      tokens: { total: text.split(/\s+/).length },
       model: this.model
     };
   }
 
   async stream(messages, onChunk, options = {}) {
-    if (!this.client) throw new Error('Gemini client not initialized');
-
     const model = this.client.getGenerativeModel({ model: this.model });
     const stream = await model.generateContentStream({
       contents: messages.map(m => ({
@@ -59,15 +53,10 @@ class GeminiProvider extends LLMProvider {
       }))
     });
 
-    let fullText = '';
     for await (const chunk of stream.stream) {
-      const text = chunk.text();
-      onChunk(text);
-      fullText += text;
+      onChunk(chunk.text());
     }
 
-    return { streamed: true, tokens: fullText.split(/\s+/).length, model: this.model };
+    return { streamed: true, model: this.model };
   }
 }
-
-module.exports = GeminiProvider;

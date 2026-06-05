@@ -1,14 +1,14 @@
-const LLMProvider = require('./LLMProvider');
+import { LLMProvider } from './LLMProvider.js';
 
-class AnthropicProvider extends LLMProvider {
+export class AnthropicProvider extends LLMProvider {
   constructor(config = {}) {
     super(config);
     this.model = config.model || 'claude-opus-4-6';
     this.apiKey = config.apiKey || process.env.ANTHROPIC_API_KEY;
     
     try {
-      this.Anthropic = require('@anthropic-ai/sdk');
-      this.client = new this.Anthropic({ apiKey: this.apiKey });
+      const { default: Anthropic } = await import('@anthropic-ai/sdk');
+      this.client = new Anthropic({ apiKey: this.apiKey });
     } catch (e) {
       console.warn('[WARN] @anthropic-ai/sdk not installed');
       this.client = null;
@@ -73,5 +73,3 @@ class AnthropicProvider extends LLMProvider {
     return { streamed: true, tokens: totalTokens, model: this.model };
   }
 }
-
-module.exports = AnthropicProvider;

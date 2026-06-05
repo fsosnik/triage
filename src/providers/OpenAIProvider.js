@@ -1,6 +1,6 @@
-const LLMProvider = require('./LLMProvider');
+import { LLMProvider } from './LLMProvider.js';
 
-class OpenAIProvider extends LLMProvider {
+export class OpenAIProvider extends LLMProvider {
   constructor(config = {}) {
     super(config);
     this.model = config.model || 'gpt-4-turbo';
@@ -31,10 +31,7 @@ class OpenAIProvider extends LLMProvider {
     const response = await this.client.chat.completions.create({
       model: this.model,
       max_tokens: options.max_tokens || 1024,
-      messages: messages.map(m => ({
-        role: m.role,
-        content: m.content
-      }))
+      messages
     });
 
     return {
@@ -55,20 +52,14 @@ class OpenAIProvider extends LLMProvider {
       model: this.model,
       max_tokens: options.max_tokens || 1024,
       stream: true,
-      messages: messages.map(m => ({
-        role: m.role,
-        content: m.content
-      }))
+      messages
     });
 
-    let totalTokens = 0;
     for await (const chunk of stream) {
       const content = chunk.choices[0]?.delta?.content;
       if (content) onChunk(content);
     }
 
-    return { streamed: true, tokens: totalTokens, model: this.model };
+    return { streamed: true, model: this.model };
   }
 }
-
-module.exports = OpenAIProvider;
