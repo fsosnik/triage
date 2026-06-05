@@ -1,6 +1,6 @@
 # TRIAGE OS — Agentic Operating System
 
-**Production-ready orchestration engine for AI agents with knowledge graph + token optimization.**
+**Prototype orchestration engine for AI agents with knowledge graph + token optimization.**
 
 ![Status](https://img.shields.io/badge/status-production-green) ![Version](https://img.shields.io/badge/version-1.2.1-blue) ![Tests](https://img.shields.io/badge/tests-225%2F234-brightgreen)
 
