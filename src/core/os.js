@@ -13,7 +13,7 @@
  */
 
 const fs = require('fs');
-const path = require('path');
+const path = require('path');npm test 2>&1 | grep "Tests:"
 const LearningLoopV2 = require('../learning/learning-loop-v2');
 const RollbackLoop = require('../learning/rollback-loop');
 const WeightUpdater = require('../learning/weight-updater');
@@ -257,7 +257,7 @@ class TRIAGEOS {
         }
       }
     }
-    console.log('\nNo similar pattern found');
+    console.log('\nNo similar pattern found');}
   classifyTaskType(task) {
     const lower = task.toLowerCase();
     if (lower.includes('refactor')) return 'refactor';
@@ -265,7 +265,7 @@ class TRIAGEOS {
     if (lower.includes('fix') || lower.includes('bug')) return 'bugfix';
     return 'general';
   }
-    return 'general';
+  
   }
 
   checkBlocklist(task) {
