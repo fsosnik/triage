@@ -1,0 +1,123 @@
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Monaco', monospace; font-size: 24px; font-weight: bold; fill: #cdd6f4; }
+      .label { font-family: 'Monaco', monospace; font-size: 13px; fill: #cdd6f4; }
+      .value { font-family: 'Monaco', monospace; font-size: 14px; font-weight: bold; fill: #a6e3a1; }
+      .axis-line { stroke: #45475a; stroke-width: 2; }
+      .grid-line { stroke: #313244; stroke-width: 1; stroke-dasharray: 5,5; }
+      .bar-raw { fill: #f38ba8; opacity: 0.8; }
+      .bar-graphify { fill: #f9e2af; opacity: 0.8; }
+      .bar-triage { fill: #a6e3a1; opacity: 0.8; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="500" fill="#1e1e2e"/>
+
+  <!-- Title -->
+  <text x="500" y="40" class="title" text-anchor="middle">Token Consumption Benchmark</text>
+  <text x="500" y="65" class="label" text-anchor="middle" font-size="14">Real-world multi-file context vs. compression strategies</text>
+
+  <!-- Y-Axis Label -->
+  <text x="20" y="200" class="label" text-anchor="middle" transform="rotate(-90 20 200)">Tokens</text>
+
+  <!-- Y-Axis -->
+  <line x1="60" y1="80" x2="60" y2="420" class="axis-line"/>
+
+  <!-- X-Axis -->
+  <line x1="60" y1="420" x2="950" y2="420" class="axis-line"/>
+
+  <!-- Grid Lines & Y-Axis Labels -->
+  <line x1="60" y1="420" x2="950" y2="420" class="axis-line"/>
+  
+  <!-- 50K line -->
+  <line x1="60" y1="100" x2="950" y2="100" class="grid-line"/>
+  <text x="50" y="105" class="label" text-anchor="end" font-size="12">50K</text>
+
+  <!-- 40K line -->
+  <line x1="60" y1="160" x2="950" y2="160" class="grid-line"/>
+  <text x="50" y="165" class="label" text-anchor="end" font-size="12">40K</text>
+
+  <!-- 30K line -->
+  <line x1="60" y1="220" x2="950" y2="220" class="grid-line"/>
+  <text x="50" y="225" class="label" text-anchor="end" font-size="12">30K</text>
+
+  <!-- 20K line -->
+  <line x1="60" y1="280" x2="950" y2="280" class="grid-line"/>
+  <text x="50" y="285" class="label" text-anchor="end" font-size="12">20K</text>
+
+  <!-- 10K line -->
+  <line x1="60" y1="340" x2="950" y2="340" class="grid-line"/>
+  <text x="50" y="345" class="label" text-anchor="end" font-size="12">10K</text>
+
+  <!-- 0 line -->
+  <line x1="60" y1="400" x2="950" y2="400" class="grid-line"/>
+  <text x="50" y="405" class="label" text-anchor="end" font-size="12">0</text>
+
+  <!-- Bar 1: Raw Context (50K) -->
+  <rect x="120" y="100" width="60" height="300" class="bar-raw"/>
+  <text x="150" y="420" class="label" text-anchor="middle">Raw</text>
+  <text x="150" y="435" class="label" text-anchor="middle">Context</text>
+  <text x="150" y="65" class="value" text-anchor="middle">50K</text>
+
+  <!-- Arrow and label -->
+  <line x1="200" y1="250" x2="260" y2="250" stroke="#89b4fa" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="230" y="240" class="label" text-anchor="middle" font-size="11">71.5x</text>
+
+  <!-- Bar 2: Graphify (2K) -->
+  <rect x="280" y="390" width="60" height="30" class="bar-graphify"/>
+  <text x="310" y="420" class="label" text-anchor="middle">Graphify</text>
+  <text x="310" y="435" class="label" text-anchor="middle">Indexed</text>
+  <text x="310" y="375" class="value" text-anchor="middle">2K</text>
+
+  <!-- Arrow and label -->
+  <line x1="360" y1="350" x2="420" y2="310" stroke="#89b4fa" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="385" y="325" class="label" text-anchor="middle" font-size="11">3.5x</text>
+
+  <!-- Bar 3: TRIAGE OS with Graphify + Ruflo (700 tokens) -->
+  <rect x="480" y="398" width="60" height="22" class="bar-triage"/>
+  <text x="510" y="420" class="label" text-anchor="middle">TRIAGE OS</text>
+  <text x="510" y="435" class="label" text-anchor="middle">(Opt.)</text>
+  <text x="510" y="383" class="value" text-anchor="middle">700t</text>
+
+  <!-- Savings annotation -->
+  <g>
+    <rect x="630" y="100" width="300" height="150" fill="#313244" stroke="#45475a" stroke-width="2" rx="5"/>
+    <text x="780" y="130" class="label" font-weight="bold" text-anchor="middle">TRIAGE OS Advantage</text>
+    
+    <text x="640" y="160" class="label" font-size="12">✓ 71.5x fewer tokens</text>
+    <text x="640" y="180" class="label" font-size="12">✓ Graphify semantic indexing</text>
+    <text x="640" y="200" class="label" font-size="12">✓ Ruflo compression + caching</text>
+    <text x="640" y="220" class="label" font-size="12">✓ Real evidence validation</text>
+  </g>
+
+  <!-- Speed comparison -->
+  <g>
+    <rect x="630" y="280" width="300" height="100" fill="#313244" stroke="#45475a" stroke-width="2" rx="5"/>
+    <text x="780" y="305" class="label" font-weight="bold" text-anchor="middle">Speed Impact</text>
+    
+    <text x="640" y="330" class="label" font-size="12">Sequential: 60min</text>
+    <text x="640" y="350" class="label" font-size="12">Parallel (TRIAGE): 25min</text>
+    <text x="780" y="375" class="value" font-size="16" text-anchor="middle">2.4x faster</text>
+  </g>
+
+  <!-- Legend -->
+  <g>
+    <rect x="100" y="460" width="15" height="15" class="bar-raw"/>
+    <text x="125" y="472" class="label" font-size="11">Raw (baseline)</text>
+
+    <rect x="330" y="460" width="15" height="15" class="bar-graphify"/>
+    <text x="355" y="472" class="label" font-size="11">Graphify (indexing)</text>
+
+    <rect x="590" y="460" width="15" height="15" class="bar-triage"/>
+    <text x="615" y="472" class="label" font-size="11">TRIAGE OS (optimized)</text>
+  </g>
+
+  <!-- Arrowhead marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#89b4fa"/>
+    </marker>
+  </defs>
+</svg>

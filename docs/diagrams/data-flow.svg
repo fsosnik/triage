@@ -1,0 +1,135 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .box { fill: #1e1e2e; stroke: #45475a; stroke-width: 2; }
+      .box-success { fill: #a6e3a1; stroke: #a6e3a1; }
+      .box-warning { fill: #f9e2af; stroke: #f9e2af; }
+      .box-error { fill: #f38ba8; stroke: #f38ba8; }
+      .text { font-family: 'Monaco', monospace; font-size: 13px; fill: #cdd6f4; }
+      .text-dark { fill: #000; }
+      .arrow { stroke: #89b4fa; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .label { font-size: 11px; fill: #89b4fa; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#89b4fa"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="500" y="30" class="text" font-size="20" font-weight="bold" text-anchor="middle">
+    TRIAGE OS — Data Flow
+  </text>
+
+  <!-- Input -->
+  <rect x="50" y="70" width="150" height="60" class="box"/>
+  <text x="125" y="105" class="text" text-anchor="middle">INPUT</text>
+  <text x="125" y="120" class="text text-dark" text-anchor="middle" font-size="10">Task</text>
+
+  <!-- Arrow to Core -->
+  <path d="M 200 100 L 280 100" class="arrow"/>
+  
+  <!-- Core OS -->
+  <rect x="280" y="70" width="150" height="60" class="box"/>
+  <text x="355" y="105" class="text" text-anchor="middle">CORE OS</text>
+  <text x="355" y="120" class="text text-dark" text-anchor="middle" font-size="10">Route + Select</text>
+
+  <!-- Arrow to Agents -->
+  <path d="M 430 100 L 500 100" class="arrow"/>
+
+  <!-- Parallel Agents -->
+  <g>
+    <!-- Code Agent -->
+    <rect x="500" y="20" width="100" height="50" class="box"/>
+    <text x="550" y="50" class="text" text-anchor="middle" font-size="11">Code Agent</text>
+    
+    <!-- QA Agent -->
+    <rect x="500" y="80" width="100" height="50" class="box"/>
+    <text x="550" y="110" class="text" text-anchor="middle" font-size="11">QA Agent</text>
+    
+    <!-- Research Agent -->
+    <rect x="500" y="140" width="100" height="50" class="box"/>
+    <text x="550" y="170" class="text" text-anchor="middle" font-size="11">Research</text>
+    
+    <!-- Risk Agent -->
+    <rect x="500" y="200" width="100" height="50" class="box"/>
+    <text x="550" y="230" class="text" text-anchor="middle" font-size="11">Risk Agent</text>
+  </g>
+
+  <!-- Arrows from agents to execution -->
+  <path d="M 600 45 L 700 100" class="arrow"/>
+  <path d="M 600 105 L 700 120" class="arrow"/>
+  <path d="M 600 165 L 700 140" class="arrow"/>
+  <path d="M 600 225 L 700 160" class="arrow"/>
+
+  <!-- Execution Layer -->
+  <rect x="700" y="70" width="150" height="120" class="box"/>
+  <text x="775" y="90" class="text" text-anchor="middle" font-weight="bold">EXECUTION</text>
+  <text x="775" y="110" class="text" font-size="10" text-anchor="middle">Git | Bash | Tests</text>
+  <text x="775" y="125" class="text" font-size="10" text-anchor="middle">LLM APIs</text>
+  <text x="775" y="140" class="text" font-size="10" text-anchor="middle">Production Check</text>
+  <text x="775" y="160" class="text" font-size="10" text-anchor="middle">Real Evidence ✓</text>
+
+  <!-- Arrow to Validation -->
+  <path d="M 775 190 L 775 250" class="arrow"/>
+
+  <!-- Validation Gate -->
+  <rect x="700" y="250" width="150" height="80" class="box"/>
+  <text x="775" y="275" class="text" text-anchor="middle" font-weight="bold">VALIDATION</text>
+  <text x="775" y="295" class="text" font-size="10" text-anchor="middle">Git Status: Clean?</text>
+  <text x="775" y="310" class="text" font-size="10" text-anchor="middle">Tests: Pass?</text>
+  <text x="775" y="325" class="text" font-size="10" text-anchor="middle">Prod: Healthy?</text>
+
+  <!-- Paths: Success vs Failure -->
+  <!-- Success Path -->
+  <path d="M 700 290 L 600 290" class="arrow" stroke="#a6e3a1"/>
+  <text x="650" y="285" class="label" text-anchor="middle">✓ PASS</text>
+
+  <!-- Failure Path -->
+  <path d="M 700 330 L 600 330" class="arrow" stroke="#f38ba8"/>
+  <text x="650" y="325" class="label" text-anchor="middle">✗ FAIL</text>
+
+  <!-- Learning Loop (Success) -->
+  <rect x="450" y="270" width="130" height="60" class="box-success"/>
+  <text x="515" y="295" class="text text-dark" text-anchor="middle" font-weight="bold">LEARNING</text>
+  <text x="515" y="315" class="text text-dark" text-anchor="middle" font-size="10">Capture pattern</text>
+
+  <!-- Rollback Loop (Failure) -->
+  <rect x="450" y="310" width="130" height="60" class="box-error"/>
+  <text x="515" y="335" class="text text-dark" text-anchor="middle" font-weight="bold">ROLLBACK</text>
+  <text x="515" y="355" class="text text-dark" text-anchor="middle" font-size="10">Revert + Block</text>
+
+  <!-- Knowledge Base (top right) -->
+  <rect x="700" y="370" width="150" height="100" class="box-warning"/>
+  <text x="775" y="395" class="text text-dark" text-anchor="middle" font-weight="bold">KNOWLEDGE BASE</text>
+  <text x="775" y="415" class="text text-dark" text-anchor="middle" font-size="10">Pattern Library</text>
+  <text x="775" y="430" class="text text-dark" text-anchor="middle" font-size="10">(What worked)</text>
+  <text x="775" y="450" class="text text-dark" text-anchor="middle" font-size="10">Blocklist</text>
+  <text x="775" y="465" class="text text-dark" text-anchor="middle" font-size="10">(What failed)</text>
+
+  <!-- Arrows to Knowledge Base -->
+  <path d="M 515 330 L 700 400" class="arrow" stroke="#f9e2af"/>
+  <path d="M 515 370 L 700 420" class="arrow" stroke="#f9e2af"/>
+
+  <!-- Output -->
+  <rect x="50" y="450" width="200" height="100" class="box"/>
+  <text x="150" y="480" class="text" text-anchor="middle" font-weight="bold">OUTPUT</text>
+  <text x="150" y="500" class="text" font-size="10" text-anchor="middle">Status: VALIDATED</text>
+  <text x="150" y="520" class="text" font-size="10" text-anchor="middle">Evidence: Git, Tests,</text>
+  <text x="150" y="540" class="text" font-size="10" text-anchor="middle">Production Metrics</text>
+
+  <!-- Arrow from Learning/Rollback to Output -->
+  <path d="M 450 340 L 250 500" class="arrow"/>
+
+  <!-- Legend -->
+  <g>
+    <text x="50" y="570" class="text" font-size="12" font-weight="bold">Legend:</text>
+    <rect x="50" y="580" width="20" height="20" class="box"/>
+    <text x="80" y="595" class="text" font-size="10">Standard Process</text>
+    
+    <rect x="300" y="580" width="20" height="20" class="box-success"/>
+    <text x="330" y="595" class="text" font-size="10">Success Path</text>
+    
+    <rect x="550" y="580" width="20" height="20" class="box-error"/>
+    <text x="580" y="595" class="text" font-size="10">Failure Path</text>
+  </g>
+</svg>
