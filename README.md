@@ -71,3 +71,23 @@ Graphify + Ruflo REQUIRED for all optimization. Before implementation: (1) `npx 
 ---
 
 Built with: Node.js, Anthropic Claude API, Graphify, Ruflo
+
+## 🚀 Multi-LLM Support (v1.1.0)
+
+TRIAGE soporta múltiples LLMs:
+- Anthropic Claude
+- OpenAI GPT-4
+- Google Gemini
+- Ollama (local)
+
+**Empezar:** `INSTALL.md`
+
+## 🚀 Multi-LLM Support (v1.1.0)
+
+TRIAGE soporta múltiples LLMs:
+- ✅ Anthropic Claude
+- ✅ OpenAI GPT-4
+- ✅ Google Gemini
+- ✅ Ollama (local, gratis)
+
+**Comenzar**: Ver `INSTALL.md`
