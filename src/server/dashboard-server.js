@@ -65,3 +65,11 @@ class DashboardServer {
 }
 
 module.exports = DashboardServer;
+
+// Health check endpoint
+const HealthCheck = require('./health-check');
+const hc = new HealthCheck();
+
+this.app.get('/health', (req, res) => {
+  res.json(hc.check(this.os));
+});
