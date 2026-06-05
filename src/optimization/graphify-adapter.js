@@ -1,37 +1,33 @@
-/**
- * Token compression adapter
- * Reduces JSON payload size by 50-70%
- */
 class GraphifyAdapter {
-  compressEvents(events) {
-    return events.map(e => ({
-      t: e.type[0],
-      ts: Math.floor(new Date(e.timestamp).getTime() / 1000),
-      s: e.data.success ? 1 : 0,
-      tk: e.data.tokens,
-      d: e.data.duration_ms
-    }));
+  constructor() {
+    // Mock de 840 nodes - patterns comunes
+    this.nodes = [
+      { id: 'auth', label: 'authentication' },
+      { id: 'code', label: 'code implementation' },
+      { id: 'sec', label: 'security review' },
+      { id: 'test', label: 'testing' },
+      { id: 'perf', label: 'performance' },
+      { id: 'data', label: 'data processing' },
+      { id: 'deploy', label: 'deployment' },
+      { id: 'api', label: 'API design' }
+    ];
+    this.edges = [];
   }
 
-  compressPatterns(patterns) {
-    return patterns.map(p => ({
-      id: p.id,
-      sr: (p.success_rate * 100) | 0,
-      a: p.agents.join(','),
-      t: p.execution_time
-    }));
+  findSimilarPatterns(task) {
+    const keywords = task.toLowerCase().split(' ');
+    const matches = this.nodes.filter(n => 
+      keywords.some(kw => n.label.includes(kw))
+    );
+    return matches.slice(0, 3);
   }
 
-  decompressEvent(compressed) {
-    return {
-      timestamp: new Date(compressed.ts * 1000).toISOString(),
-      type: compressed.t === 'c' ? 'cycle_complete' : compressed.t,
-      data: {
-        success: compressed.s === 1,
-        tokens: compressed.tk,
-        duration_ms: compressed.d
-      }
-    };
+  getNodeInfo(nodeId) {
+    return this.nodes.find(n => n.id === nodeId);
+  }
+
+  getConnectedNodes(nodeId) {
+    return this.edges.filter(e => e.source === nodeId || e.target === nodeId);
   }
 }
 
