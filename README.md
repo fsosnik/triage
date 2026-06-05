@@ -74,11 +74,11 @@ Most AI agent systems **hallucinate success**. TRIAGE OS routes tasks to 4 speci
 
 ## Documentation
 
-- 📖 [Quick Start](docs/guides/QUICKSTART.md)
-- 🏗️ [Architecture](docs/architecture/ARCHITECTURE.md)
-- 🔧 [Installation](docs/guides/INSTALLATION.md)
-- 📊 [API Reference](docs/api/API_REFERENCE.md)
-- 🤖 [Agents Guide](docs/guides/AGENTS.md)
+-  [Quick Start](docs/guides/QUICKSTART.md)
+-  [Architecture](docs/architecture/ARCHITECTURE.md)
+-  [Installation](docs/guides/INSTALLATION.md)
+-  [API Reference](docs/api/API_REFERENCE.md)
+-  [Agents Guide](docs/guides/AGENTS.md)
 
 ---
 
