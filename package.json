@@ -1,41 +1,8 @@
 {
   "name": "triage-os",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Intelligent task orchestration with 4 specialized agents",
-  "main": "src/core/os.js",
-  "scripts": {
-    "start": "node src/server/dashboard-server.js",
-    "dev": "nodemon src/index.js",
-    "test": "jest --detectOpenHandles --forceExit",
-    "lint": "eslint src/",
-    "docs": "docs/generate-site.sh",
-    "example:basic": "node examples/1-basic-usage.js",
-    "example:server": "node examples/2-express-server.js",
-    "example:learning": "node examples/3-learning.js"
-  },
-  "keywords": [
-    "orchestration",
-    "agents",
-    "ai",
-    "agentic",
-    "validation",
-    "learning"
-  ],
-  "author": "Fer Sosnik",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fsosnik/triage.git"
-  },
-  "dependencies": {
-    "bcrypt": "^6.0.0",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "triage-os": "^1.1.0",
-    "ws": "^8.21.0"
-  },
-  "devDependencies": {
-    "eslint": "^9.39.4",
-    "jest": "^30.4.2"
-  },
+  "main": "src/index.js",
+  "type": "commonjs",
+  ...resto...
 }

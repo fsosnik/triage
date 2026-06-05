@@ -1,43 +1,77 @@
-# TRIAGE OS — Instalación & Configuración
+# Installation Guide
 
-**Versión**: 1.1.0 (Multi-LLM Support)
+## Requirements
 
-## 🚀 Quick Start (5 minutos)
+- Node.js 18+
+- npm 8+
+- API key (Anthropic, OpenAI, or Gemini)
 
-### Opción 1: Anthropic Claude (Recomendado)
+## Option A: NPM Package
+
 ```bash
-cd ~/LocalProjects/Projects/triage
-npm install @anthropic-ai/sdk
-echo 'export ANTHROPIC_API_KEY="sk-ant-TUAPIKEY"' >> ~/.zshrc
-source ~/.zshrc
-npm start
+npm install triage-os
 ```
 
-### Opción 2: OpenAI GPT-4
+Then create `.env`:
+ANTHROPIC_API_KEY=sk-...
+TRIAGE_PROVIDER=anthropic
+
+## Option B: From GitHub
+
 ```bash
-cd ~/LocalProjects/Projects/triage
-npm install openai
-echo 'export OPENAI_API_KEY="sk-TUAPIKEY"' >> ~/.zshrc
-source ~/.zshrc
-TRIAGE_PROVIDER=openai npm start
+git clone https://github.com/fsosnik/triage.git
+cd triage
+npm install
+
+cp .env.example .env
+# Edit .env with your keys
+
+npm test    # Verify
+npm start   # Run dashboard
 ```
 
-### Opción 3: Google Gemini
+## Providers
+
+| Provider | Key | Env Var |
+|----------|-----|---------|
+| Anthropic (Claude) | sk-ant-... | `ANTHROPIC_API_KEY` |
+| OpenAI (GPT-4) | sk-proj-... | `OPENAI_API_KEY` |
+| Google (Gemini) | AIza... | `GOOGLE_API_KEY` |
+| Local (Ollama) | (none) | `TRIAGE_PROVIDER=ollama` |
+
+Set provider:
 ```bash
-cd ~/LocalProjects/Projects/triage
-npm install @google/generative-ai
-echo 'export GOOGLE_API_KEY="AIza-TUAPIKEY"' >> ~/.zshrc
-source ~/.zshrc
-TRIAGE_PROVIDER=gemini npm start
+export TRIAGE_PROVIDER=anthropic  # or openai, gemini, ollama
 ```
 
-### Opción 4: Ollama (Gratis, Local)
+## Verification
+
 ```bash
-brew install ollama
-nohup ollama serve > ~/ollama.log 2>&1 &
-ollama pull llama2
-cd ~/LocalProjects/Projects/triage
-TRIAGE_PROVIDER=ollama npm start
+npm test                    # Tests
+npm run validate           # Structure check
+curl http://localhost:3000/health  # Health (after npm start)
 ```
 
-**Docs completa**: `docs/MULTI_LLM_GUIDE.md`
+## Troubleshooting
+
+**Error: "Cannot find module"**
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+**Error: "API key invalid"**
+- Verify `.env` has correct key
+- Check provider is set: `echo $TRIAGE_PROVIDER`
+
+**Port 3000 in use**
+```bash
+npm start -- --port 3001
+```
+
+## Docker (Optional)
+
+```bash
+docker build -t triage-os .
+docker run -e ANTHROPIC_API_KEY=sk-... -p 3000:3000 triage-os
+```
