@@ -72,3 +72,4 @@ config/.env
 
 # Allow checkpoints (learned state)
 !.claude/checkpoints/
+triage
