@@ -44,13 +44,6 @@ class LearningLoopV2 {
     return true;
   }
 
-  getStats() {
-    return this.stats;
-  }
-}
-
-module.exports = LearningLoopV2;
-
   classifyTask(task) {
     const lower = task.toLowerCase();
     if (lower.includes('fix') || lower.includes('bug')) return 'bugfix';
@@ -62,3 +55,10 @@ module.exports = LearningLoopV2;
   rankAgents(agents) {
     return agents.sort((a, b) => (this.agentWeights[b] || 0) - (this.agentWeights[a] || 0));
   }
+
+  getStats() {
+    return this.stats;
+  }
+}
+
+module.exports = LearningLoopV2;
