@@ -14,7 +14,7 @@
     ],
     "cost": 1579,
     "success_rate": 1,
-    "reuse_count": 0,
+    "reuse_count": 1,
     "execution_time_minutes": 5,
     "last_used": "2026-06-03T22:48:08.155Z",
     "created_at": "2026-06-03T22:48:08.155Z"
@@ -154,5 +154,25 @@
     "execution_time_minutes": 5,
     "last_used": "2026-06-03T23:02:15.319Z",
     "created_at": "2026-06-03T23:02:15.319Z"
+  },
+  {
+    "id": "pattern-1780668264816",
+    "category": "user-generated",
+    "task_type": "feature",
+    "agents": [
+      "code",
+      "risk",
+      "research"
+    ],
+    "tools": [
+      "npm",
+      "git"
+    ],
+    "cost": 1612,
+    "success_rate": 1,
+    "reuse_count": 0,
+    "execution_time_minutes": 5,
+    "last_used": "2026-06-05T14:04:24.816Z",
+    "created_at": "2026-06-05T14:04:24.816Z"
   }
 ]

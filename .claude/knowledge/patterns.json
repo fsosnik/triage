@@ -1,0 +1,36 @@
+[
+  {
+    "id": "p1",
+    "success_rate": 0.95,
+    "agents": [
+      "code",
+      "qa"
+    ],
+    "execution_time": 100,
+    "learned_at": "2026-06-05T14:03:11.334Z",
+    "reuses": 0,
+    "improvements": []
+  },
+  {
+    "id": "p1",
+    "success_rate": 0.95,
+    "agents": [
+      "code"
+    ],
+    "execution_time": 100,
+    "learned_at": "2026-06-05T14:03:11.334Z",
+    "reuses": 0,
+    "improvements": []
+  },
+  {
+    "id": "p2",
+    "success_rate": 0.8,
+    "agents": [
+      "qa"
+    ],
+    "execution_time": 150,
+    "learned_at": "2026-06-05T14:03:11.334Z",
+    "reuses": 0,
+    "improvements": []
+  }
+]

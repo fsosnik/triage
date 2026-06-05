@@ -1,0 +1,5 @@
+[![npm version](https://badge.fury.io/js/triage.svg)](https://badge.fury.io/js/triage)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/fsosnik/triage/blob/main/LICENSE)
+[![Tests](https://img.shields.io/badge/tests-117%2F119-brightgreen)](https://github.com/fsosnik/triage)
+[![Code Coverage](https://img.shields.io/badge/coverage-98%25-brightgreen)](https://github.com/fsosnik/triage)
+[![GitHub stars](https://img.shields.io/github/stars/fsosnik/triage?style=social)](https://github.com/fsosnik/triage)
