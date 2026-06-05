@@ -1,48 +1,34 @@
 # TRIAGE OS
 
-## Context
-TRIAGE OS is an agentic operating system that orchestrates specialized agents.
+Agentic OS para optimizar decisiones de Claude mediante especialistas paralelos, validación contra realidad y aprendizaje continuo.
 
-## Stack
-- Node.js 18+
-- Claude AI (Anthropic API)
-- GitHub Actions
-- Notion (optional)
+## Tecnología
+- Node.js + Express
+- 4 agents (Code, QA, Research, Risk)
+- Graphify (840 nodes knowledge graph)
+- Ruflo (complexity analysis)
+- PM2 (production orchestration)
 
-## Commands
-- npm start → Run TRIAGE OS
-- npm run docs:generate → Auto-generate documentation
-- npm run validate:structure → Validate project structure
-- npm test → Run tests
+## Artefactos
+- README.md (intro)
+- docs/RELEASE_v1.0.md (release notes)
+- src/core/os.js (orchestrator)
+- src/server/dashboard-server.js (UI)
+- graphify-out/ (knowledge visualization)
 
-## Conventions
-- English for code, Spanish for comments
-- Minimal implementations
-- Evidence-driven validation
-- Parallel execution
+## Ejecución
+Local: `npm run dev`
+Fedora: http://100.72.120.32:3000
+Health: `/health` endpoint
 
-## Never
-- Push without validation
-- Commit secrets to git
-- Use --force-push
-- Hardcode API keys
+## Tests
+107/115 pass. Fallas en Phase 4, 7, 11, 18 (state isolation).
 
-## Token Optimization (LAW)
-**Graphify + Ruflo REQUIRED for all optimization decisions**
+## Token Optimization LAW
+Graphify + Ruflo requerido. Selecciona 10-20 nodos relevantes de 840.
 
-- Graphify (840 nodes): Use graph structure to select relevant context
-- Ruflo (Complexity analysis): Identify refactoring targets BEFORE implementation
-- Cache god nodes (degree > 20) for every orchestration cycle
-- Pattern compression: 70% reduction (validated phase-19)
-- Cache_control: Anthropic prompt caching on repeated patterns
-
-**Non-negotiable:**
-- Every task analyzes with Ruflo first (complexity check)
-- Every context selection uses graphify-out/graph.json
-- No hardcoded patterns - use graph communities
-- Token budget: 4000/cycle max (vs 14612 baseline)
-
-**Tools:**
-- src/optimization/graphify-token-cache.js (production)
-- Ruflo: /analyze, /refactor commands
-- Dashboard: http://localhost:3000 (metrics)
+## Contribución
+1. Fork + PR
+2. npm test debe pasar
+3. Documenta cambios
+4. Updatea CHANGELOG
