@@ -1,16 +1,16 @@
 class PerformanceProfiler {
   constructor() {
-    this.profiles = [];
+    this.cycles = [];
   }
 
-  profile(cycle) {
-    this.profiles.push(cycle);
+  profile(cycleData) {
+    this.cycles.push(cycleData);
   }
 
   analyze() {
     return {
-      cycles: this.profiles.length,
-      avg_duration: this.profiles.length > 0 ? this.profiles.reduce((a, c) => a + (c.duration || 0), 0) / this.profiles.length : 0
+      cycles: this.cycles.length,
+      avg_duration: this.cycles.length > 0 ? this.cycles.reduce((a, c) => a + (c.duration || 0), 0) / this.cycles.length : 0
     };
   }
 }

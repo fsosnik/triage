@@ -1,18 +1,25 @@
 class TrendAnalyzer {
-  constructor(data = []) {
-    this.data = data || [];
+  constructor() {
+    this.dataPoints = {};
+  }
+
+  addDataPoint(metric, value) {
+    if (!this.dataPoints[metric]) this.dataPoints[metric] = [];
+    this.dataPoints[metric].push(value);
   }
 
   calculateTrend(metric) {
-    if (this.data.length < 2) return 'stable';
-    const first = this.data[0][metric] || 0;
-    const last = this.data[this.data.length - 1][metric] || 0;
+    const data = this.dataPoints[metric] || [];
+    if (data.length < 2) return 'stable';
+    const first = data[0];
+    const last = data[data.length - 1];
     return last > first ? 'improving' : 'declining';
   }
 
   predictNext(metric) {
-    if (this.data.length === 0) return 0;
-    return this.data.reduce((a, d) => a + (d[metric] || 0), 0) / this.data.length;
+    const data = this.dataPoints[metric] || [];
+    if (data.length === 0) return 0;
+    return data.reduce((a, v) => a + v, 0) / data.length;
   }
 }
 module.exports = TrendAnalyzer;
