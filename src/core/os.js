@@ -3,6 +3,8 @@
  */
 
 const fs = require('fs');
+const GraphifyAdapter = require('../optimization/graphify-adapter');
+const RufloOptimizer = require('../optimization/ruflo-optimizer');
 const path = require('path');
 const LearningLoopV2 = require('../learning/learning-loop-v2');
 const RollbackLoop = require('../learning/rollback-loop');
