@@ -82,6 +82,10 @@ Edit with:
 - `TRIAGE_PROVIDER` (anthropic/openai/gemini/ollama)
 - `GITHUB_TOKEN` (optional, for integrations)
 
+## Usage Examples
+
+See [USER_GUIDE.md](docs/USER_GUIDE.md) for real examples.
+
 ## Testing
 
 ```bash
