@@ -5,17 +5,23 @@ export class AnthropicProvider extends LLMProvider {
     super(config);
     this.model = config.model || 'claude-opus-4-6';
     this.apiKey = config.apiKey || process.env.ANTHROPIC_API_KEY;
-    
+    this.client = null;
+    this.initialized = false;
+  }
+
+  async init() {
+    if (this.initialized) return;
     try {
-      const { default: Anthropic } = await import('@anthropic-ai/sdk');
+      const Anthropic = (await import('@anthropic-ai/sdk')).default;
       this.client = new Anthropic({ apiKey: this.apiKey });
+      this.initialized = true;
     } catch (e) {
       console.warn('[WARN] @anthropic-ai/sdk not installed');
-      this.client = null;
     }
   }
 
   async validate() {
+    await this.init();
     if (!this.apiKey) throw new Error('ANTHROPIC_API_KEY not set');
     if (!this.client) throw new Error('@anthropic-ai/sdk not installed');
     return true;
@@ -26,15 +32,13 @@ export class AnthropicProvider extends LLMProvider {
   }
 
   async chat(messages, options = {}) {
+    await this.init();
     if (!this.client) throw new Error('Anthropic client not initialized');
 
     const response = await this.client.messages.create({
       model: this.model,
       max_tokens: options.max_tokens || 1024,
-      messages: messages.map(m => ({
-        role: m.role,
-        content: m.content
-      }))
+      messages
     });
 
     return {
@@ -49,15 +53,13 @@ export class AnthropicProvider extends LLMProvider {
   }
 
   async stream(messages, onChunk, options = {}) {
+    await this.init();
     if (!this.client) throw new Error('Anthropic client not initialized');
 
     const stream = await this.client.messages.stream({
       model: this.model,
       max_tokens: options.max_tokens || 1024,
-      messages: messages.map(m => ({
-        role: m.role,
-        content: m.content
-      }))
+      messages
     });
 
     let totalTokens = 0;
