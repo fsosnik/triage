@@ -1,4 +1,4 @@
-import { LLMProviderFactory } from '../src/providers/LLMProviderFactory.js';
+const { LLMProviderFactory } = require('../src/providers/LLMProviderFactory.js');
 
 describe('E2E: LLM Provider Factory', () => {
   test('should list all providers', () => {
