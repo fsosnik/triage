@@ -147,14 +147,9 @@ class TRIAGEOS {
     const validation = await this.validateResults(agentResults, input);
     
     if (!validation.passed) {
-      if (this.config.phase2_enabled) {
-        console.log('\n[ERROR] Validation FAILED - Triggering Rollback Loop');
-        await this.rollback.handleFailure(input.task, selectedAgents, {
-          reason: validation.errors[0],
-          canRevert: true
-        });
-      }
-      throw new Error(`Validation failed: ${validation.errors.join(', ')}`);
+      console.warn('[AUDIT FIX] Rollback disabled until approval mechanism is implemented');
+      console.warn('[AUDIT FIX] Validation failed:', validation.errors);
+      return { status: 'VALIDATION_FAILED', reason: validation, manual_rollback_required: true };
     }
 
     console.log('\n[SUCCESS] Validation PASSED');
