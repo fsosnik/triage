@@ -23,6 +23,8 @@ Think of it as a medical triage system: instead of one generalist handling every
 
 ## System Architecture
 
+![TRIAGE OS Data Flow](docs/diagrams/data-flow.svg)
+
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                                                                 │
@@ -154,6 +156,8 @@ Result: 71.5x fewer tokens per query (Graphify benchmark)
 ---
 
 ## Benchmark: Real Results
+
+![Token Savings Benchmark](docs/diagrams/token-benchmark.svg)
 
 ```
 Metric                  TRIAGE OS       Others        Advantage
