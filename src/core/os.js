@@ -1,15 +1,5 @@
 /**
  * TRIAGE OS - Core Orchestrator (Layer 2)
- * 
- * Main orchestration engine with integrated Phase 2 Learning Loops:
- * 1. Loads pattern library
- * 2. Detects similar patterns
- * 3. Selects appropriate agents
- * 4. Executes agents in parallel
- * 5. Validates results
- * 6. Learning Loop v2: Updates agent weights
- * 7. Rollback Loop: Handles failures
- * 8. Captures learning & creates checkpoints
  */
 
 const fs = require('fs');
@@ -41,22 +31,18 @@ class TRIAGEOS {
       total_tokens: 0
     };
 
-    // Phase 2: Initialize learning systems
     if (this.config.phase2_enabled) {
       this.learning = new LearningLoopV2();
       this.rollback = new RollbackLoop();
       this.updater = new WeightUpdater();
-    this.optimizer = new TokenOptimizer();
-    this.dashboard = new MetricsDashboard();
+      this.optimizer = new TokenOptimizer();
+      this.dashboard = new MetricsDashboard();
     }
 
     this.loadPatterns();
     this.loadBlocklist();
   }
 
-  /**
-   * Load pattern library from .claude/patterns/successes.json
-   */
   loadPatterns() {
     try {
       const file = path.join(process.cwd(), '.claude/patterns/successes.json');
@@ -71,9 +57,6 @@ class TRIAGEOS {
     }
   }
 
-  /**
-   * Load blocklist from .claude/patterns/blocklist.json
-   */
   loadBlocklist() {
     try {
       const file = path.join(process.cwd(), '.claude/patterns/blocklist.json');
@@ -88,10 +71,6 @@ class TRIAGEOS {
     }
   }
 
-  /**
-   * Main orchestration flow with Phase 2 integration
-   * Cyclomatic complexity: 8 (refactored from 35)
-   */
   async orchestrate(input) {
     const startTime = Date.now();
     console.log('\n' + '='.repeat(60));
@@ -136,9 +115,6 @@ class TRIAGEOS {
     }
   }
 
-  /**
-   * Prepares input by validating and detecting patterns
-   */
   async prepareInput(input) {
     this.validateInput(input);
     const similarPattern = this.findSimilarPattern(input.task);
@@ -151,9 +127,6 @@ class TRIAGEOS {
     return { similarPattern, taskType };
   }
 
-  /**
-   * Selects and weights agents based on task type and Phase 2 predictions
-   */
   async selectAndWeightAgents(taskType, input, similarPattern) {
     let selectedAgents = this.selectAgents(input, similarPattern);
     
@@ -170,9 +143,6 @@ class TRIAGEOS {
     return selectedAgents;
   }
 
-  /**
-   * Validates results and handles failures via rollback loop
-   */
   async handleValidationGate(agentResults, input, selectedAgents, taskType) {
     const validation = await this.validateResults(agentResults, input);
     
@@ -190,9 +160,6 @@ class TRIAGEOS {
     console.log('\n[SUCCESS] Validation PASSED');
   }
 
-  /**
-   * Performs Phase 2 learning and pattern refinement
-   */
   async performLearning(selectedAgents, taskType, input, agentResults, duration, similarPattern) {
     if (this.config.phase2_enabled && this.config.learning_enabled) {
       console.log('\n[PHASE 2] Learning Loop v2');
@@ -218,9 +185,6 @@ class TRIAGEOS {
     }
   }
 
-  /**
-   * Records metrics and reports learning statistics
-   */
   async recordMetricsAndReport(selectedAgents, agentResults, duration) {
     this.metrics.total_cycles++;
     this.metrics.successful++;
@@ -257,15 +221,16 @@ class TRIAGEOS {
         }
       }
     }
-    console.log('\nNo similar pattern found');}
+    console.log('\nNo similar pattern found');
+    return null;
+  }
+
   classifyTaskType(task) {
     const lower = task.toLowerCase();
     if (lower.includes('refactor')) return 'refactor';
     if (lower.includes('implement') || lower.includes('code')) return 'feature';
     if (lower.includes('fix') || lower.includes('bug')) return 'bugfix';
     return 'general';
-  }
-  
   }
 
   checkBlocklist(task) {
