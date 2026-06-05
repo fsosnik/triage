@@ -50,3 +50,15 @@ class LearningLoopV2 {
 }
 
 module.exports = LearningLoopV2;
+
+  classifyTask(task) {
+    const lower = task.toLowerCase();
+    if (lower.includes('fix') || lower.includes('bug')) return 'bugfix';
+    if (lower.includes('implement') || lower.includes('feature')) return 'feature';
+    if (lower.includes('refactor')) return 'refactor';
+    return 'general';
+  }
+
+  rankAgents(agents) {
+    return agents.sort((a, b) => (this.agentWeights[b] || 0) - (this.agentWeights[a] || 0));
+  }
