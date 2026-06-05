@@ -1,57 +1,30 @@
 {
   "name": "triage",
-  "version": "0.1.0",
-  "description": "TRIAGE OS - Agentic & Self-Learning Operating System",
+  "version": "0.2.0",
+  "description": "Intelligent task orchestration with 4 specialized agents",
   "main": "src/core/os.js",
-  "author": "fsosnik",
-  "license": "MIT",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/server/dashboard-server.js",
     "dev": "nodemon src/index.js",
-    "test": "jest --passWithNoTests",
-    "test:basic": "jest tests/basic.test.js",
-    "test:patterns": "node scripts/validate-patterns.js || true",
-    "test:blocklist": "node scripts/validate-blocklist.js || true",
-    "simulate:cycle": "node scripts/simulate-cycle.js",
-    "monitor:consumption": "node scripts/monitor-consumption.js",
-    "validate:structure": "node scripts/validate-structure.js",
-    "docs:generate": "node scripts/generate-docs.js",
-    "docs:watch": "nodemon scripts/generate-docs.js",
-    "update:readme": "node scripts/update-readme.js",
-    "update:changelog": "node scripts/update-changelog.js",
-    "phase:1": "echo '\\n🎯 PHASE 1: Foundation (Week 1)\\n' && npm start",
-    "phase:2": "echo '→ Phase 2: Learning (Week 2)' && echo 'Implement learning loops'",
-    "phase:3": "echo '→ Phase 3: Optimization (Week 3)' && echo 'Add caching & performance'",
-    "phase:4": "echo '→ Phase 4: Scale (Week 4+)' && echo 'Full automation & MCPs'",
-    "lint": "eslint src/ --fix || true",
-    "format": "prettier --write . || true",
-    "setup": "npm install && npm run validate:structure"
+    "test": "jest --detectOpenHandles --forceExit",
+    "lint": "eslint src/",
+    "docs": "docs/generate-site.sh",
+    "example:basic": "node examples/1-basic-usage.js",
+    "example:server": "node examples/2-express-server.js",
+    "example:learning": "node examples/3-learning.js"
   },
-  "dependencies": {
-    "@anthropic-ai/sdk": "^0.28.0",
-    "@notionhq/client": "^2.2.0",
-    "@octokit/rest": "^21.0.0",
-    "dotenv": "^16.0.0",
-    "express": "^5.2.1",
-    "graphify": "^1.0.0",
-    "lodash": "^4.17.21",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7",
-    "recharts": "^3.8.1",
-    "ruflo": "^3.10.37",
-    "webpack": "^5.107.2",
-    "webpack-cli": "^7.0.3",
-    "ws": "^8.21.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "eslint": "^8.0.0",
-    "jest": "^29.0.0",
-    "nodemon": "^3.0.0",
-    "prettier": "^3.0.0"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=9.0.0"
+  "keywords": [
+    "orchestration",
+    "agents",
+    "ai",
+    "agentic",
+    "validation",
+    "learning"
+  ],
+  "author": "Fer Sosnik",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fsosnik/triage.git"
   }
 }
