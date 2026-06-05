@@ -8,6 +8,8 @@ const LearningLoopV2 = require('../learning/learning-loop-v2');
 const RollbackLoop = require('../learning/rollback-loop');
 const WeightUpdater = require('../learning/weight-updater');
 const TokenOptimizer = require('../optimization/token-optimizer');
+const GraphifyAdapter = require('../optimization/graphify-adapter');
+const RufloOptimizer = require('../optimization/ruflo-optimizer');
 const MetricsDashboard = require('../optimization/metrics-dashboard');
 
 class TRIAGEOS {
@@ -246,8 +248,18 @@ class TRIAGEOS {
   }
 
   selectAgents(input, pattern) {
-    const taskType = this.classifyTaskType(input.task);
+    // Usar graphify para encontrar patrones similares
+    const graphPatterns = this.graphify.findSimilarPatterns(input.task);
     
+    if (graphPatterns.length > 0) {
+      console.log('[GRAPHIFY] Found similar patterns:', graphPatterns.map(p => p.label).join(', '));
+      // Mapear nodes a agentes
+      if (graphPatterns[0].label?.toLowerCase().includes('code')) return ['code', 'qa'];
+      if (graphPatterns[0].label?.toLowerCase().includes('security')) return ['qa', 'risk'];
+      if (graphPatterns[0].label?.toLowerCase().includes('data')) return ['research', 'code'];
+    }
+
+    const taskType = this.classifyTaskType(input.task);
     const agentMap = {
       feature: ['code', 'qa', 'risk'],
       bugfix: ['code', 'qa'],
@@ -255,13 +267,7 @@ class TRIAGEOS {
       general: ['code', 'qa']
     };
 
-    let agents = agentMap[taskType] || agentMap['general'];
-
-    if (pattern && pattern.agents) {
-      agents = pattern.agents;
-    }
-
-    return agents;
+    return agentMap[taskType] || agentMap['general'];
   }
 
   async executeAgentsParallel(agentNames, input) {
@@ -288,7 +294,10 @@ class TRIAGEOS {
         apiKey: process.env.ANTHROPIC_API_KEY || process.env.OPENAI_API_KEY || process.env.GOOGLE_API_KEY
       });
 
-      const agentPrompt = `You are a ${name} agent. Task: ${input.task}. Context: ${input.context || ''}`;
+      let agentPrompt = `You are a ${name} agent. Task: ${input.task}. Context: ${input.context || ''}`;
+      const optimization = this.ruflo.optimizeForProvider(agentPrompt, process.env.TRIAGE_PROVIDER || 'anthropic');
+      console.log(`[RUFLO] Token optimization: ${optimization.savings} saved, ${optimization.compression_ratio} compressed`);
+      agentPrompt = optimization.optimized_tokens < optimization.original_tokens ? this.ruflo.compressPrompt(agentPrompt).compressed : agentPrompt;
       const result = await provider.chat([{ role: 'user', content: agentPrompt }], { max_tokens: 512 });
 
       return {

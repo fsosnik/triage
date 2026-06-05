@@ -448,5 +448,25 @@
     "failure_reason": "test",
     "failure_type": "test_failure",
     "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T18:23:03.883Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-05T18:23:03.945Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
   }
 ]
