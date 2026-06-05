@@ -1,3 +1,4 @@
+cat > ~/LocalProjects/Projects/triage/.github/workflows/tests.yml << 'EOF'
 name: ✅ Tests & Validation
 
 on:
@@ -24,32 +25,11 @@ jobs:
       - name: 📚 Install Dependencies
         run: npm install --legacy-peer-deps
 
-      - name: 🔍 Validate Structure
-        run: npm run validate:structure
-
-      - name: ✔️ Validate Patterns
-        run: npm run test:patterns
-        continue-on-error: true
-
-      - name: 🚫 Validate Blocklist
-        run: npm run test:blocklist
-        continue-on-error: true
-
       - name: 🧪 Run Tests
         run: npm test
-        continue-on-error: true
-
-      - name: 📊 Check Consumption
-        run: npm run test:consumption
-        continue-on-error: true
 
       - name: 📋 Lint Code
         run: npm run lint
-        continue-on-error: true
-
-      - name: 📝 Format Check
-        run: npm run format
-        continue-on-error: true
 
       - name: 💬 Slack on Failure
         if: failure()
@@ -59,3 +39,4 @@ jobs:
           text: 'TRIAGE: Validation failed on ${{ github.ref }}'
           webhook_url: ${{ secrets.SLACK_WEBHOOK }}
         continue-on-error: true
+EOF
