@@ -2,6 +2,21 @@
 
 An intelligent, self-learning orchestration system that coordinates multiple specialized AI agents to solve complex tasks with real-world validation, continuous learning, and token optimization.
 
+## ⚠️ Status: Prototype (v1.0.0)
+
+**Laboratory/experimental software.** Current implementation state:
+- ✅ Architecture: 27-phase design complete
+- ✅ Multi-LLM abstraction (Claude, GPT, Gemini, Ollama) — in progress
+- ✅ Token optimization: 78% savings documented
+- ⚠️ Agents: Currently mocked (synthetic results)
+- ⚠️ Rollback: Manual approval required (auto-revert disabled)
+- ⚠️ Security: Basic controls only (not production-grade)
+
+**Use cases:** Learning agentic patterns, prototyping, token research.  
+**Not for:** Production workloads, critical automation, untrusted environments.
+
+**Roadmap:** v1.1 (real LLM integration), v1.2 (end-to-end tests), v2.0 (production).
+
 ## What is TRIAGE OS?
 
 TRIAGE OS is a **7-layer agentic operating system** that directs tasks to the right specialists, validates results against reality, learns from failures, and optimizes token usage through semantic knowledge graphs. Instead of one AI making decisions, TRIAGE deploys a **team of experts**: Code Agent (implementation), QA Agent (security/bugs), Research Agent (best practices), Risk Agent (rollback).
