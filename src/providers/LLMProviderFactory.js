@@ -27,4 +27,3 @@ export class LLMProviderFactory {
 }
 
 module.exports = { LLMProviderFactory };
-module.exports = { LLMProviderFactory };" >> ~/LocalProjects/Projects/triage/src/providers/LLMProviderFactory.js

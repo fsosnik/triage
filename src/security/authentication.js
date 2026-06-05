@@ -10,7 +10,7 @@ class AuthManager {
     this.users = new Map();
   }
 
-  createUser(username, password) {
+  async createUser(username, password) {
     const hash = await bcrypt.hash(password, 10);
     const user = {
       id: crypto.randomBytes(8).toString('hex'),
