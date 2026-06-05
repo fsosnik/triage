@@ -4,5 +4,28 @@
   "description": "Intelligent task orchestration with 4 specialized agents",
   "main": "src/index.js",
   "type": "commonjs",
-  ...resto...
+  "scripts": {
+    "test": "jest --passWithNoTests",
+    "start": "node src/server/dashboard-server.js",
+    "build": "node scripts/build.js",
+    "lint": "eslint src/",
+    "validate": "node scripts/validate-structure.js"
+  },
+  "keywords": ["orchestration", "agents", "ai", "agentic", "validation", "learning"],
+  "author": "fsosnik <fersosnik@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "ws": "^8.21.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fsosnik/triage.git"
+  }
 }
