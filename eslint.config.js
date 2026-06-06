@@ -1,12 +1,9 @@
-import js from '@eslint/js';
+const js = require('@eslint/js');
 
-export default [
-  js.configs.recommended,
+module.exports = [
   {
-    files: ['src/**/*.js'],
-    rules: {
-      'no-unused-vars': ['warn', { args: 'none' }],
-      'no-console': 'off'
-    }
+    files: ['**/*.js'],
+    languageOptions: { ecmaVersion: 2021 },
+    rules: { 'no-console': 'warn', 'no-unused-vars': 'warn' }
   }
 ];
