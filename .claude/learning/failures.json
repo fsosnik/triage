@@ -573,5 +573,1985 @@
     "failure_type": "validation_error",
     "severity": 3,
     "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:59:48.974Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:59:49.673Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:59:50.394Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:59:51.112Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:59:51.809Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:59:52.571Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:59:53.317Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:59:54.070Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:59:54.829Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:59:55.591Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:59:56.352Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:59:57.217Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:59:58.050Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:59:59.028Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:00.000Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:01.009Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:02.126Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:03.279Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:04.432Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:05.524Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:06.721Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:08.085Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:09.393Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:10.891Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:12.366Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:13.870Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:15.500Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:17.091Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:18.771Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:20.452Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:22.412Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:24.220Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:26.008Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:27.806Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:29.835Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:31.928Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:34.065Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:36.299Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:38.341Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:40.631Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:43.011Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:45.386Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:47.501Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:49.891Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:52.659Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:55.296Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:00:58.092Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:00.803Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:03.736Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:06.498Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:09.315Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:12.437Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:15.101Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:18.014Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:20.918Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:23.763Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:26.922Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:29.943Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:33.467Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:36.822Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:40.451Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:44.241Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:47.820Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:51.858Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:55.352Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:01:59.347Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:02:03.077Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:02:07.334Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:02:11.367Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:02:15.625Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:02:19.549Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:02:23.606Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:02:28.104Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:02:32.268Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:02:36.111Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:02:40.483Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:02:44.633Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:02:49.069Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:02:53.960Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:02:58.650Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:03:03.699Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:03:08.452Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:03:13.116Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:03:18.415Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:03:23.066Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:03:28.221Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:03:33.041Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:03:37.567Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:03:42.627Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:03:48.312Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:03:53.117Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:03:58.253Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:04:03.728Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:04:08.901Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:04:14.481Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:04:19.924Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:04:25.281Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:04:31.165Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:04:37.257Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:04:42.937Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:04:49.193Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:04:55.180Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:05:01.083Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:05:07.280Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:05:13.884Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:05:20.048Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:05:25.954Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:05:32.348Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:05:38.761Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:05:44.690Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:05:50.526Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:05:56.812Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:05:57.082Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:05:57.870Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:05:59.447Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:01.885Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:02.446Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:03.721Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:05.367Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:08.345Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:08.722Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:10.386Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:12.369Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:15.027Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:16.340Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:17.374Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:20.625Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:22.066Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:23.416Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:24.505Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:28.062Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:29.452Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:30.904Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:33.066Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:36.344Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:37.627Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:38.890Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:43.300Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:44.326Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:45.907Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:48.804Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:52.533Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:53.452Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:06:54.921Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:00.394Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:01.204Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:02.964Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:06.935Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:09.318Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:10.973Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:13.889Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:17.269Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:18.891Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:21.189Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:25.825Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:26.885Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:29.155Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:32.782Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:34.465Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:37.480Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:39.641Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:43.356Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:47.778Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:49.818Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:52.179Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:56.597Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:07:57.792Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:08:00.181Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:08:06.191Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:08:09.543Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:08:14.480Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:08:22.024Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:08:29.367Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:08:36.847Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:08:44.508Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:08:52.677Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:09:00.859Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:09:09.252Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:09:17.787Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T17:09:25.798Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
   }
 ]

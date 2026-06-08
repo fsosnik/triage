@@ -197,8 +197,8 @@
     "constraints": [],
     "steps": [],
     "created_at": "2026-06-08T16:28:33.770Z",
-    "last_used": "2026-06-08T16:56:36.834Z",
-    "reuse_count": 199
+    "last_used": "2026-06-08T17:14:33.934Z",
+    "reuse_count": 564
   },
   {
     "id": "pattern-1780936650079",
@@ -222,8 +222,8 @@
     "constraints": [],
     "steps": [],
     "created_at": "2026-06-08T16:37:30.079Z",
-    "last_used": "2026-06-08T16:56:37.260Z",
-    "reuse_count": 42
+    "last_used": "2026-06-08T17:11:17.570Z",
+    "reuse_count": 181
   },
   {
     "id": "pattern-1780937795453",
@@ -272,7 +272,69 @@
     "constraints": [],
     "steps": [],
     "created_at": "2026-06-08T16:56:37.691Z",
-    "last_used": "2026-06-08T16:56:37.691Z",
+    "last_used": "2026-06-08T17:17:15.391Z",
+    "reuse_count": 2
+  },
+  {
+    "id": "pattern-1780938818990",
+    "name": "analyze",
+    "category": "general",
+    "task_type": "analyze",
+    "agents_used": [
+      "code",
+      "qa",
+      "knowledge"
+    ],
+    "success_rate": 100,
+    "execution_time_ms": 0,
+    "tokens_avg": 0,
+    "tools": [
+      "npm",
+      "git",
+      "tsc",
+      "jest",
+      "eslint"
+    ],
+    "constraints": [],
+    "steps": [],
+    "created_at": "2026-06-08T17:13:38.990Z",
+    "last_used": "2026-06-08T17:13:38.990Z",
+    "reuse_count": 0
+  },
+  {
+    "id": "pattern-1780938844339",
+    "name": "analyze-with-tools",
+    "category": "general",
+    "task_type": "analyze-with-tools",
+    "agents_used": [
+      "knowledge"
+    ],
+    "success_rate": 100,
+    "execution_time_ms": 0,
+    "tokens_avg": 0,
+    "tools": [],
+    "constraints": [],
+    "steps": [],
+    "created_at": "2026-06-08T17:14:04.339Z",
+    "last_used": "2026-06-08T17:14:04.339Z",
+    "reuse_count": 0
+  },
+  {
+    "id": "pattern-1780938919985",
+    "name": "final-test",
+    "category": "testing",
+    "task_type": "final-test",
+    "agents_used": [
+      "knowledge"
+    ],
+    "success_rate": 100,
+    "execution_time_ms": 0,
+    "tokens_avg": 0,
+    "tools": [],
+    "constraints": [],
+    "steps": [],
+    "created_at": "2026-06-08T17:15:19.985Z",
+    "last_used": "2026-06-08T17:15:19.985Z",
     "reuse_count": 0
   }
 ]

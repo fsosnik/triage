@@ -394,5 +394,1634 @@
     "incidents": 1,
     "auto_reject": false,
     "created_at": "2026-06-08T16:56:36.841Z"
+  },
+  {
+    "id": "learned-1780937988974",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T16:59:48.974Z"
+  },
+  {
+    "id": "learned-1780937989673",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T16:59:49.673Z"
+  },
+  {
+    "id": "learned-1780937990394",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T16:59:50.394Z"
+  },
+  {
+    "id": "learned-1780937991112",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T16:59:51.112Z"
+  },
+  {
+    "id": "learned-1780937991809",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T16:59:51.809Z"
+  },
+  {
+    "id": "learned-1780937992572",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T16:59:52.572Z"
+  },
+  {
+    "id": "learned-1780937993318",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T16:59:53.318Z"
+  },
+  {
+    "id": "learned-1780937994070",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T16:59:54.070Z"
+  },
+  {
+    "id": "learned-1780937994829",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T16:59:54.829Z"
+  },
+  {
+    "id": "learned-1780937995592",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T16:59:55.592Z"
+  },
+  {
+    "id": "learned-1780937996353",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T16:59:56.353Z"
+  },
+  {
+    "id": "learned-1780937997218",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T16:59:57.218Z"
+  },
+  {
+    "id": "learned-1780937998051",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T16:59:58.051Z"
+  },
+  {
+    "id": "learned-1780937999029",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T16:59:59.029Z"
+  },
+  {
+    "id": "learned-1780938000001",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:00.001Z"
+  },
+  {
+    "id": "learned-1780938001010",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:01.010Z"
+  },
+  {
+    "id": "learned-1780938002127",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:02.127Z"
+  },
+  {
+    "id": "learned-1780938003279",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:03.279Z"
+  },
+  {
+    "id": "learned-1780938004433",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:04.433Z"
+  },
+  {
+    "id": "learned-1780938005525",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:05.525Z"
+  },
+  {
+    "id": "learned-1780938006722",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:06.722Z"
+  },
+  {
+    "id": "learned-1780938008086",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:08.086Z"
+  },
+  {
+    "id": "learned-1780938009394",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:09.394Z"
+  },
+  {
+    "id": "learned-1780938010893",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:10.893Z"
+  },
+  {
+    "id": "learned-1780938012367",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:12.367Z"
+  },
+  {
+    "id": "learned-1780938013872",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:13.872Z"
+  },
+  {
+    "id": "learned-1780938015502",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:15.502Z"
+  },
+  {
+    "id": "learned-1780938017094",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:17.094Z"
+  },
+  {
+    "id": "learned-1780938018774",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:18.774Z"
+  },
+  {
+    "id": "learned-1780938020454",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:20.454Z"
+  },
+  {
+    "id": "learned-1780938022418",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:22.418Z"
+  },
+  {
+    "id": "learned-1780938024221",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:24.221Z"
+  },
+  {
+    "id": "learned-1780938026011",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:26.011Z"
+  },
+  {
+    "id": "learned-1780938027809",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:27.809Z"
+  },
+  {
+    "id": "learned-1780938029836",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:29.836Z"
+  },
+  {
+    "id": "learned-1780938031930",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:31.930Z"
+  },
+  {
+    "id": "learned-1780938034068",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:34.068Z"
+  },
+  {
+    "id": "learned-1780938036301",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:36.301Z"
+  },
+  {
+    "id": "learned-1780938038344",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:38.344Z"
+  },
+  {
+    "id": "learned-1780938040633",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:40.633Z"
+  },
+  {
+    "id": "learned-1780938043014",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:43.014Z"
+  },
+  {
+    "id": "learned-1780938045390",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:45.390Z"
+  },
+  {
+    "id": "learned-1780938047502",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:47.502Z"
+  },
+  {
+    "id": "learned-1780938049896",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:49.896Z"
+  },
+  {
+    "id": "learned-1780938052662",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:52.662Z"
+  },
+  {
+    "id": "learned-1780938055301",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:55.301Z"
+  },
+  {
+    "id": "learned-1780938058095",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:00:58.095Z"
+  },
+  {
+    "id": "learned-1780938060805",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:00.805Z"
+  },
+  {
+    "id": "learned-1780938063737",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:03.737Z"
+  },
+  {
+    "id": "learned-1780938066503",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:06.503Z"
+  },
+  {
+    "id": "learned-1780938069317",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:09.317Z"
+  },
+  {
+    "id": "learned-1780938072438",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:12.438Z"
+  },
+  {
+    "id": "learned-1780938075103",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:15.103Z"
+  },
+  {
+    "id": "learned-1780938078017",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:18.017Z"
+  },
+  {
+    "id": "learned-1780938080921",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:20.921Z"
+  },
+  {
+    "id": "learned-1780938083763",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:23.763Z"
+  },
+  {
+    "id": "learned-1780938086924",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:26.924Z"
+  },
+  {
+    "id": "learned-1780938089947",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:29.947Z"
+  },
+  {
+    "id": "learned-1780938093471",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:33.471Z"
+  },
+  {
+    "id": "learned-1780938096825",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:36.825Z"
+  },
+  {
+    "id": "learned-1780938100454",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:40.454Z"
+  },
+  {
+    "id": "learned-1780938104247",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:44.247Z"
+  },
+  {
+    "id": "learned-1780938107824",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:47.824Z"
+  },
+  {
+    "id": "learned-1780938111863",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:51.863Z"
+  },
+  {
+    "id": "learned-1780938115356",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:55.356Z"
+  },
+  {
+    "id": "learned-1780938119352",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:01:59.352Z"
+  },
+  {
+    "id": "learned-1780938123082",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:02:03.082Z"
+  },
+  {
+    "id": "learned-1780938127335",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:02:07.335Z"
+  },
+  {
+    "id": "learned-1780938131369",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:02:11.369Z"
+  },
+  {
+    "id": "learned-1780938135630",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:02:15.630Z"
+  },
+  {
+    "id": "learned-1780938139552",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:02:19.552Z"
+  },
+  {
+    "id": "learned-1780938143607",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:02:23.607Z"
+  },
+  {
+    "id": "learned-1780938148112",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:02:28.112Z"
+  },
+  {
+    "id": "learned-1780938152271",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:02:32.271Z"
+  },
+  {
+    "id": "learned-1780938156114",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:02:36.114Z"
+  },
+  {
+    "id": "learned-1780938160488",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:02:40.488Z"
+  },
+  {
+    "id": "learned-1780938164638",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:02:44.638Z"
+  },
+  {
+    "id": "learned-1780938169074",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:02:49.074Z"
+  },
+  {
+    "id": "learned-1780938173964",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:02:53.964Z"
+  },
+  {
+    "id": "learned-1780938178658",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:02:58.658Z"
+  },
+  {
+    "id": "learned-1780938183706",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:03:03.706Z"
+  },
+  {
+    "id": "learned-1780938188459",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:03:08.459Z"
+  },
+  {
+    "id": "learned-1780938193121",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:03:13.121Z"
+  },
+  {
+    "id": "learned-1780938198421",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:03:18.421Z"
+  },
+  {
+    "id": "learned-1780938203069",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:03:23.069Z"
+  },
+  {
+    "id": "learned-1780938208225",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:03:28.225Z"
+  },
+  {
+    "id": "learned-1780938213047",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:03:33.047Z"
+  },
+  {
+    "id": "learned-1780938217576",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:03:37.576Z"
+  },
+  {
+    "id": "learned-1780938222633",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:03:42.633Z"
+  },
+  {
+    "id": "learned-1780938228318",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:03:48.318Z"
+  },
+  {
+    "id": "learned-1780938233122",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:03:53.122Z"
+  },
+  {
+    "id": "learned-1780938238260",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:03:58.260Z"
+  },
+  {
+    "id": "learned-1780938243741",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:04:03.741Z"
+  },
+  {
+    "id": "learned-1780938248908",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:04:08.908Z"
+  },
+  {
+    "id": "learned-1780938254488",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:04:14.488Z"
+  },
+  {
+    "id": "learned-1780938259932",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:04:19.932Z"
+  },
+  {
+    "id": "learned-1780938265288",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:04:25.289Z"
+  },
+  {
+    "id": "learned-1780938271171",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:04:31.171Z"
+  },
+  {
+    "id": "learned-1780938277259",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:04:37.259Z"
+  },
+  {
+    "id": "learned-1780938282948",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:04:42.948Z"
+  },
+  {
+    "id": "learned-1780938289205",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:04:49.205Z"
+  },
+  {
+    "id": "learned-1780938295183",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:04:55.183Z"
+  },
+  {
+    "id": "learned-1780938301095",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:05:01.095Z"
+  },
+  {
+    "id": "learned-1780938307290",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:05:07.290Z"
+  },
+  {
+    "id": "learned-1780938313888",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:05:13.888Z"
+  },
+  {
+    "id": "learned-1780938320058",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:05:20.058Z"
+  },
+  {
+    "id": "learned-1780938325958",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:05:25.958Z"
+  },
+  {
+    "id": "learned-1780938332352",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:05:32.352Z"
+  },
+  {
+    "id": "learned-1780938338767",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:05:38.767Z"
+  },
+  {
+    "id": "learned-1780938344698",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:05:44.698Z"
+  },
+  {
+    "id": "learned-1780938350539",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:05:50.539Z"
+  },
+  {
+    "id": "learned-1780938356814",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:05:56.814Z"
+  },
+  {
+    "id": "learned-1780938357088",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:05:57.088Z"
+  },
+  {
+    "id": "learned-1780938357870",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:05:57.870Z"
+  },
+  {
+    "id": "learned-1780938359449",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:05:59.449Z"
+  },
+  {
+    "id": "learned-1780938361886",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:01.886Z"
+  },
+  {
+    "id": "learned-1780938362455",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:02.455Z"
+  },
+  {
+    "id": "learned-1780938363722",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:03.722Z"
+  },
+  {
+    "id": "learned-1780938365368",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:05.368Z"
+  },
+  {
+    "id": "learned-1780938368345",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:08.345Z"
+  },
+  {
+    "id": "learned-1780938368729",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:08.729Z"
+  },
+  {
+    "id": "learned-1780938370386",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:10.386Z"
+  },
+  {
+    "id": "learned-1780938372373",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:12.373Z"
+  },
+  {
+    "id": "learned-1780938375031",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:15.031Z"
+  },
+  {
+    "id": "learned-1780938376341",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:16.341Z"
+  },
+  {
+    "id": "learned-1780938377374",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:17.375Z"
+  },
+  {
+    "id": "learned-1780938380627",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:20.627Z"
+  },
+  {
+    "id": "learned-1780938382070",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:22.070Z"
+  },
+  {
+    "id": "learned-1780938383420",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:23.420Z"
+  },
+  {
+    "id": "learned-1780938384505",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:24.505Z"
+  },
+  {
+    "id": "learned-1780938388064",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:28.064Z"
+  },
+  {
+    "id": "learned-1780938389454",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:29.454Z"
+  },
+  {
+    "id": "learned-1780938390905",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:30.905Z"
+  },
+  {
+    "id": "learned-1780938393067",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:33.067Z"
+  },
+  {
+    "id": "learned-1780938396359",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:36.359Z"
+  },
+  {
+    "id": "learned-1780938397628",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:37.628Z"
+  },
+  {
+    "id": "learned-1780938398891",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:38.891Z"
+  },
+  {
+    "id": "learned-1780938403306",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:43.306Z"
+  },
+  {
+    "id": "learned-1780938404332",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:44.332Z"
+  },
+  {
+    "id": "learned-1780938405908",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:45.908Z"
+  },
+  {
+    "id": "learned-1780938408811",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:48.811Z"
+  },
+  {
+    "id": "learned-1780938412546",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:52.546Z"
+  },
+  {
+    "id": "learned-1780938413454",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:53.454Z"
+  },
+  {
+    "id": "learned-1780938414921",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:06:54.921Z"
+  },
+  {
+    "id": "learned-1780938420412",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:00.412Z"
+  },
+  {
+    "id": "learned-1780938421208",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:01.208Z"
+  },
+  {
+    "id": "learned-1780938422966",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:02.966Z"
+  },
+  {
+    "id": "learned-1780938426938",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:06.938Z"
+  },
+  {
+    "id": "learned-1780938429325",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:09.325Z"
+  },
+  {
+    "id": "learned-1780938430974",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:10.974Z"
+  },
+  {
+    "id": "learned-1780938433891",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:13.891Z"
+  },
+  {
+    "id": "learned-1780938437271",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:17.271Z"
+  },
+  {
+    "id": "learned-1780938438894",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:18.894Z"
+  },
+  {
+    "id": "learned-1780938441261",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:21.261Z"
+  },
+  {
+    "id": "learned-1780938445829",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:25.829Z"
+  },
+  {
+    "id": "learned-1780938446885",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:26.885Z"
+  },
+  {
+    "id": "learned-1780938449157",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:29.157Z"
+  },
+  {
+    "id": "learned-1780938452786",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:32.786Z"
+  },
+  {
+    "id": "learned-1780938454470",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:34.470Z"
+  },
+  {
+    "id": "learned-1780938457487",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:37.487Z"
+  },
+  {
+    "id": "learned-1780938459648",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:39.648Z"
+  },
+  {
+    "id": "learned-1780938463356",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:43.356Z"
+  },
+  {
+    "id": "learned-1780938467783",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:47.783Z"
+  },
+  {
+    "id": "learned-1780938469830",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:49.830Z"
+  },
+  {
+    "id": "learned-1780938472180",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:52.180Z"
+  },
+  {
+    "id": "learned-1780938476600",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:56.600Z"
+  },
+  {
+    "id": "learned-1780938477809",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:07:57.809Z"
+  },
+  {
+    "id": "learned-1780938480186",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:08:00.186Z"
+  },
+  {
+    "id": "learned-1780938486035",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:08:06.035Z"
+  },
+  {
+    "id": "learned-1780938486196",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:08:06.196Z"
+  },
+  {
+    "id": "learned-1780938489550",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:08:09.550Z"
+  },
+  {
+    "id": "learned-1780938494512",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:08:14.512Z"
+  },
+  {
+    "id": "learned-1780938502035",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:08:22.035Z"
+  },
+  {
+    "id": "learned-1780938509375",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:08:29.375Z"
+  },
+  {
+    "id": "learned-1780938516863",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:08:36.863Z"
+  },
+  {
+    "id": "learned-1780938524515",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:08:44.515Z"
+  },
+  {
+    "id": "learned-1780938532684",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:08:52.684Z"
+  },
+  {
+    "id": "learned-1780938540871",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:09:00.871Z"
+  },
+  {
+    "id": "learned-1780938549254",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:09:09.254Z"
+  },
+  {
+    "id": "learned-1780938557799",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:09:17.799Z"
+  },
+  {
+    "id": "learned-1780938565816",
+    "pattern": "oauth2",
+    "severity": "WARNING",
+    "reason": "Learned from failure: validation_error",
+    "incidents": 1,
+    "auto_reject": false,
+    "created_at": "2026-06-08T17:09:25.816Z"
   }
 ]
