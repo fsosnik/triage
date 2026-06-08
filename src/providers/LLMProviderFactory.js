@@ -8,6 +8,7 @@ class LLMProviderFactory {
     anthropic: AnthropicProvider,
     claude: AnthropicProvider,
     openai: OpenAIProvider,
+    gpt: OpenAIProvider,
     gemini: GeminiProvider,
     ollama: OllamaProvider
   };

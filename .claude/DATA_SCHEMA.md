@@ -1,24 +1,15 @@
-# Data Schema — Archivos Generados Automáticamente
+# Data Schemas
 
-## 1. analytics/events.json
-**Generado por**: `src/analytics/analytics-engine.js`
-**Contenido**: Eventos de ciclos
-**Política**: Rotación cada 30 días
+## TrendAnalyzer
+- Input: metric name + array de valores [0.8, 0.85, 0.9]
+- Output: 'improving' | 'stable' | 'declining'
 
-## 2. knowledge/patterns.json
-**Generado por**: `src/knowledge/knowledge-base.js`
-**Contenido**: Patrones exitosos aprendidos
-**Política**: Mantener indefinidamente, versionado en Git
+## PerformanceProfiler  
+- recordCycle(data) → push to array
+- analyze() → { cycles: length, efficiency: score }
 
-## 3. knowledge/failures.json
-**Contenido**: Fallos + razones (blocklist dinámico)
-**Política**: Mantener, desactivar patterns después de N fallos
+## GraphifyAdapter
+- compressEvents(events) → { t, s, tk, tm }
+- compressPatterns(patterns) → { id, sr, a }
 
-## 4. knowledge/insights.json
-**Contenido**: Insights capturados manualmente
-**Política**: Mantener, revisar cada fase
-
-## 5. security/audit-log.json
-**Generado por**: `src/security/audit-log.js`
-**Contenido**: Quién hizo qué y cuándo
-**Política**: Mantener indefinidamente, archivar anual
+[etc]

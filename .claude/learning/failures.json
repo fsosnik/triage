@@ -1278,5 +1278,55 @@
     "failure_reason": "test",
     "failure_type": "test_failure",
     "severity": 2
+  },
+  {
+    "timestamp": "2026-06-08T15:35:10.906Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-08T15:35:47.953Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-08T15:36:17.665Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-08T15:36:36.850Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-08T15:36:53.629Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
   }
 ]
