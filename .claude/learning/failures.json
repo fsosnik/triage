@@ -8,5 +8,130 @@
     "failure_reason": "test",
     "failure_type": "test_failure",
     "severity": 2
+  },
+  {
+    "timestamp": "2026-06-08T16:15:46.544Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-08T16:16:28.355Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-08T16:18:54.817Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-08T16:19:26.281Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-08T16:19:56.630Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-08T16:23:10.860Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-08T16:24:39.371Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-08T16:28:33.682Z",
+    "task": "test",
+    "failed_agents": [
+      "qa"
+    ],
+    "failure_reason": "test",
+    "failure_type": "test_failure",
+    "severity": 2
+  },
+  {
+    "timestamp": "2026-06-08T16:37:30.055Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:37:48.917Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:38:41.313Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
+  },
+  {
+    "timestamp": "2026-06-08T16:50:20.478Z",
+    "task": "oauth2",
+    "failed_agents": [
+      "code",
+      "qa"
+    ],
+    "failure_reason": "Validation failed or prediction mismatch",
+    "failure_type": "validation_error",
+    "severity": 3,
+    "incident_count": 0
   }
 ]

@@ -6,10 +6,11 @@
   "type": "commonjs",
   "scripts": {
     "test": "jest --passWithNoTests",
-    "start": "node src/server/dashboard-server.js",
+    "start": "node src/api/server.js",
     "build": "node scripts/build.js",
     "lint": "eslint src/",
-    "validate": "node scripts/validate-structure.js"
+    "validate": "node scripts/validate-structure.js",
+    "example": "node examples/client.js"
   },
   "keywords": [
     "orchestration",

@@ -174,5 +174,55 @@
     "execution_time_minutes": 5,
     "last_used": "2026-06-05T14:04:24.816Z",
     "created_at": "2026-06-05T14:04:24.816Z"
+  },
+  {
+    "id": "pattern-1780936113770",
+    "name": "oauth2",
+    "category": "authentication",
+    "task_type": "oauth2",
+    "agents_used": [
+      "code",
+      "qa"
+    ],
+    "success_rate": 100,
+    "execution_time_ms": 50,
+    "tokens_avg": 1500,
+    "tools": [
+      "npm",
+      "git",
+      "tsc",
+      "jest",
+      "eslint"
+    ],
+    "constraints": [],
+    "steps": [],
+    "created_at": "2026-06-08T16:28:33.770Z",
+    "last_used": "2026-06-08T16:38:41.311Z",
+    "reuse_count": 119
+  },
+  {
+    "id": "pattern-1780936650079",
+    "name": "feature",
+    "category": "general",
+    "task_type": "feature",
+    "agents_used": [
+      "code",
+      "qa"
+    ],
+    "success_rate": 100,
+    "execution_time_ms": 0,
+    "tokens_avg": 0,
+    "tools": [
+      "npm",
+      "git",
+      "tsc",
+      "jest",
+      "eslint"
+    ],
+    "constraints": [],
+    "steps": [],
+    "created_at": "2026-06-08T16:37:30.079Z",
+    "last_used": "2026-06-08T16:38:41.335Z",
+    "reuse_count": 2
   }
 ]

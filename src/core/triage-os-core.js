@@ -1,6 +1,7 @@
 const ValidationGate = require('../validation/validation-gate');
 const FeedbackEngine = require('./feedback-engine');
 const AutoCheckpoint = require('./auto-checkpoint');
+const AgentExecutor = require('../agents/agent-executor');
 
 class TriageOSCore {
   constructor() {
@@ -15,10 +16,14 @@ class TriageOSCore {
     console.log(`\nTask: ${taskType}`);
     console.log(`Agents: ${agents.join(', ')}`);
 
-    // 1. Validar
+    // 1. Ejecutar agentes REALES
+    const agentResults = await AgentExecutor.executeAgents(agents, taskType);
+    console.log('\nAgent Results:', JSON.stringify(agentResults, null, 2));
+
+    // 2. Validar realidad
     const validation = this.gate.validate(prediction);
 
-    // 2. Procesar feedback
+    // 3. Procesar feedback
     const feedback = await this.feedback.process(
       taskType,
       agents,
@@ -26,12 +31,14 @@ class TriageOSCore {
       validation.reality
     );
 
-    // 3. Guardar checkpoint
+    // 4. Guardar checkpoint
     const checkpoint = AutoCheckpoint.save({
       task: taskType,
       status: validation.gate_passes ? 'VALIDATED' : 'FAILED',
       validations: validation.reality,
-      patterns_stored: feedback ? 1 : 0
+      patterns_stored: feedback ? 1 : 0,
+      agents_executed: agents,
+      agent_results: agentResults
     });
 
     console.log('\n' + '═'.repeat(60));
@@ -41,7 +48,8 @@ class TriageOSCore {
     return {
       validation,
       feedback,
-      checkpoint
+      checkpoint,
+      agents: agentResults
     };
   }
 }
