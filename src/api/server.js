@@ -1,63 +1,37 @@
-/**
- * Phase 12: REST API Server
- */
+const express = require('express');
 
-class APIServer {
-  constructor(triageOS, port = 3000) {
-    this.os = triageOS;
-    this.port = port;
-    this.routes = new Map();
-    this.setupRoutes();
-  }
+const app = express();
+app.use(express.json());
 
-  setupRoutes() {
-    this.route('POST', '/orchestrate', this.handleOrchestrate.bind(this));
-    this.route('GET', '/metrics', this.handleMetrics.bind(this));
-    this.route('GET', '/patterns', this.handlePatterns.bind(this));
-    this.route('GET', '/health', this.handleHealth.bind(this));
-  }
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', service: 'triage-os' });
+});
 
-  route(method, path, handler) {
-    const key = `${method}:${path}`;
-    this.routes.set(key, handler);
-  }
-
-  async handleRequest(method, path, body) {
-    const key = `${method}:${path}`;
-    const handler = this.routes.get(key);
-    if (!handler) return { status: 404, body: { error: 'Not found' } };
+app.post('/cycle', async (req, res) => {
+  try {
+    const { task, agents, prediction } = req.body;
     
-    try {
-      const result = await handler(body);
-      return { status: 200, body: result };
-    } catch (error) {
-      return { status: 500, body: { error: error.message } };
+    if (!task || !agents) {
+      return res.status(400).json({ error: 'Missing task or agents' });
     }
-  }
 
-  async handleOrchestrate(body) {
-    return this.os.orchestrate(body);
-  }
+    // Importar TriageOSCore solo cuando se necesita (lazy load)
+    const TriageOSCore = require('../core/triage-os-core');
+    const core = new TriageOSCore();
+    const result = await core.executeCycle(task, agents, prediction);
 
-  async handleMetrics(body) {
-    return this.os.getMetrics();
+    res.json({ status: 'success', data: result });
+  } catch (err) {
+    console.error('Error:', err);
+    res.status(500).json({ error: err.message });
   }
+});
 
-  async handlePatterns(body) {
-    return { count: this.os.patterns.length, patterns: this.os.patterns.slice(0, 10) };
-  }
+app.get('/metrics', (req, res) => {
+  res.json({ total_metrics: 0, success_rate: 0 });
+});
 
-  async handleHealth(body) {
-    return {
-      status: 'healthy',
-      version: '0.12.0',
-      cycles: this.os.metrics.total_cycles
-    };
-  }
-
-  getRoutes() {
-    return Array.from(this.routes.keys());
-  }
-}
-
-module.exports = APIServer;
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 TRIAGE OS running on http://localhost:${PORT}`);
+});
