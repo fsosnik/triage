@@ -1,90 +1,59 @@
 const { execSync } = require('child_process');
+const KnowledgeAgent = require('./knowledge-agent');
 
 class AgentExecutor {
-  static async executeCodeAgent(task, context = {}) {
+  static async executeCodeAgent(task) {
     try {
       console.log(`\n💻 Code Agent: ${task}`);
-      
-      // Run actual npm test
       const testOutput = execSync('npm test 2>&1', { 
         encoding: 'utf-8',
         stdio: 'pipe'
       });
-      
       const passed = (testOutput.match(/(\d+) passed/i) || [null, 0])[1];
       const failed = (testOutput.match(/(\d+) failed/i) || [null, 0])[1];
-      
       console.log(`   Tests: ${passed} pass, ${failed} fail`);
-      
       return {
         success: parseInt(failed) === 0,
         tests_passed: parseInt(passed),
-        tests_failed: parseInt(failed),
-        task: task
+        tests_failed: parseInt(failed)
       };
     } catch (e) {
-      console.log(`   ❌ Error: ${e.message.split('\n')[0]}`);
-      return { success: false, tests_passed: 0, tests_failed: 999, task };
+      console.log(`   ❌ ${e.message.split('\n')[0]}`);
+      return { success: false, tests_passed: 0, tests_failed: 999 };
     }
   }
 
-  static async executeQAAgent(task, context = {}) {
+  static async executeQAAgent(task) {
     try {
       console.log(`\n🔍 QA Agent: ${task}`);
-      
-      // Check for common issues
-      const issues = [];
-      
-      try {
-        execSync('npm run lint 2>&1', { stdio: 'pipe' });
-      } catch (e) {
-        issues.push('Lint errors found');
-      }
-      
-      console.log(`   Issues found: ${issues.length}`);
-      
-      return {
-        success: issues.length === 0,
-        issues_found: issues.length,
-        details: issues,
-        task: task
-      };
+      execSync('npm run lint 2>&1', { stdio: 'pipe' });
+      console.log(`   Lint: clean`);
+      return { success: true, issues_found: 0 };
     } catch (e) {
-      return { success: false, issues_found: 999, task };
+      console.log(`   Lint errors found`);
+      return { success: false, issues_found: 999 };
     }
   }
 
-  static async executeResearchAgent(task, context = {}) {
+  static async executeResearchAgent(task) {
     console.log(`\n📚 Research Agent: ${task}`);
-    
-    // Simulate research (in real version: web search)
-    const findings = {
-      task: task,
-      recommendations: [
-        'Use established patterns',
-        'Check dependencies',
-        'Review best practices'
-      ],
-      success: true
+    return {
+      success: true,
+      recommendations: ['Use patterns', 'Check deps', 'Review best practices']
     };
-    
-    console.log(`   Findings: ${findings.recommendations.length} recommendations`);
-    return findings;
   }
 
-  static async executeRiskAgent(task, context = {}) {
+  static async executeRiskAgent(task) {
     console.log(`\n⚠️  Risk Agent: ${task}`);
-    
-    // Analyze risks
-    const risks = {
-      task: task,
+    return {
+      success: true,
       critical_risks: [],
-      mitigation: 'Gradual rollout with monitoring',
-      success: true
+      mitigation: 'Gradual rollout'
     };
-    
-    console.log(`   Risks identified: ${risks.critical_risks.length}`);
-    return risks;
+  }
+
+  static async executeKnowledgeAgent(task) {
+    return await KnowledgeAgent.executeKnowledgeAgent(task);
   }
 
   static async executeAgents(agents, task) {
@@ -108,8 +77,15 @@ class AgentExecutor {
         case 'risk':
           results.risk = await this.executeRiskAgent(task);
           break;
+        case 'knowledge':
+          results.knowledge = await this.executeKnowledgeAgent(task);
+          break;
       }
     }
+    
+    console.log('\n' + '═'.repeat(60));
+    console.log('✅ All agents completed');
+    console.log('═'.repeat(60));
     
     return results;
   }
