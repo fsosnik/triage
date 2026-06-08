@@ -1,63 +1,66 @@
-/**
- * Phase 12: REST API Server
- */
+const express = require('express');
+const TriageOSCore = require('../core/triage-os-core');
 
-class APIServer {
-  constructor(triageOS, port = 3000) {
-    this.os = triageOS;
-    this.port = port;
-    this.routes = new Map();
-    this.setupRoutes();
-  }
+const app = express();
+app.use(express.json());
 
-  setupRoutes() {
-    this.route('POST', '/orchestrate', this.handleOrchestrate.bind(this));
-    this.route('GET', '/metrics', this.handleMetrics.bind(this));
-    this.route('GET', '/patterns', this.handlePatterns.bind(this));
-    this.route('GET', '/health', this.handleHealth.bind(this));
-  }
+const core = new TriageOSCore();
 
-  route(method, path, handler) {
-    const key = `${method}:${path}`;
-    this.routes.set(key, handler);
-  }
+// Health check
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', service: 'triage-os' });
+});
 
-  async handleRequest(method, path, body) {
-    const key = `${method}:${path}`;
-    const handler = this.routes.get(key);
-    if (!handler) return { status: 404, body: { error: 'Not found' } };
-    
-    try {
-      const result = await handler(body);
-      return { status: 200, body: result };
-    } catch (error) {
-      return { status: 500, body: { error: error.message } };
+// Execute cycle
+app.post('/cycle', async (req, res) => {
+  try {
+    const { task, agents, prediction } = req.body;
+
+    if (!task || !agents || !prediction) {
+      return res.status(400).json({
+        error: 'Missing required fields: task, agents, prediction'
+      });
     }
-  }
 
-  async handleOrchestrate(body) {
-    return this.os.orchestrate(body);
-  }
+    const result = await core.executeCycle(task, agents, prediction);
 
-  async handleMetrics(body) {
-    return this.os.getMetrics();
+    res.json({
+      status: 'success',
+      data: result
+    });
+  } catch (err) {
+    res.status(500).json({
+      error: err.message
+    });
   }
+});
 
-  async handlePatterns(body) {
-    return { count: this.os.patterns.length, patterns: this.os.patterns.slice(0, 10) };
-  }
+// Get metrics
+app.get('/metrics', (req, res) => {
+  const metrics = core.feedback.learning.getMetrics();
+  res.json(metrics);
+});
 
-  async handleHealth(body) {
-    return {
-      status: 'healthy',
-      version: '0.12.0',
-      cycles: this.os.metrics.total_cycles
-    };
-  }
+// List patterns
+app.get('/patterns', (req, res) => {
+  const PatternStorage = require('../learning/pattern-storage');
+  const patterns = PatternStorage.load();
+  res.json({ count: patterns.length, patterns });
+});
 
-  getRoutes() {
-    return Array.from(this.routes.keys());
-  }
-}
+// List checkpoints
+app.get('/checkpoints', (req, res) => {
+  const AutoCheckpoint = require('../core/auto-checkpoint');
+  const list = AutoCheckpoint.list();
+  res.json({ count: list.length, checkpoints: list });
+});
 
-module.exports = APIServer;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 TRIAGE OS API running on http://localhost:${PORT}`);
+  console.log(`POST /cycle — Execute a cycle`);
+  console.log(`GET /health — Health check`);
+  console.log(`GET /metrics — System metrics`);
+  console.log(`GET /patterns — Learned patterns`);
+  console.log(`GET /checkpoints — Saved checkpoints`);
+});
