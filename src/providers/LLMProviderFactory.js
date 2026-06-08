@@ -4,20 +4,21 @@ const GeminiProvider = require('./GeminiProvider');
 const OllamaProvider = require('./OllamaProvider');
 
 class LLMProviderFactory {
-  static providers = {
-    anthropic: AnthropicProvider,
-    claude: AnthropicProvider,
-    openai: OpenAIProvider,
-    gpt: OpenAIProvider,
-    gemini: GeminiProvider,
-    ollama: OllamaProvider
-  };
-
   static create(name, config) {
-    const Provider = this.providers[name.toLowerCase()];
+    const Provider = LLMProviderFactory.providers[name.toLowerCase()];
     if (!Provider) throw new Error(`Unknown provider: ${name}`);
     return new Provider(config);
   }
 }
+
+// Asignar después de la clase (compatible con todos los parsers)
+LLMProviderFactory.providers = {
+  anthropic: AnthropicProvider,
+  claude: AnthropicProvider,
+  openai: OpenAIProvider,
+  gpt: OpenAIProvider,
+  gemini: GeminiProvider,
+  ollama: OllamaProvider
+};
 
 module.exports = { LLMProviderFactory };
