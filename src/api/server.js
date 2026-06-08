@@ -1,63 +1,57 @@
-/**
- * Phase 12: REST API Server
- */
+const express = require('express');
+const TriageOSCore = require('../core/triage-os-core');
 
 class APIServer {
-  constructor(triageOS, port = 3000) {
-    this.os = triageOS;
+  constructor(port = 3000) {
+    this.app = express();
     this.port = port;
-    this.routes = new Map();
+    this.core = new TriageOSCore();
+    this.setupMiddleware();
     this.setupRoutes();
   }
 
+  setupMiddleware() {
+    this.app.use(express.json());
+  }
+
   setupRoutes() {
-    this.route('POST', '/orchestrate', this.handleOrchestrate.bind(this));
-    this.route('GET', '/metrics', this.handleMetrics.bind(this));
-    this.route('GET', '/patterns', this.handlePatterns.bind(this));
-    this.route('GET', '/health', this.handleHealth.bind(this));
+    // Health
+    this.app.get('/health', (req, res) => {
+      res.json({ status: 'ok', service: 'triage-os' });
+    });
+
+    // Execute cycle
+    this.app.post('/cycle', async (req, res) => {
+      try {
+        const { task, agents, prediction } = req.body;
+        const result = await this.core.executeCycle(task, agents, prediction);
+        res.json({ status: 'success', data: result });
+      } catch (e) {
+        res.status(500).json({ status: 'error', message: e.message });
+      }
+    });
+
+    // Metrics
+    this.app.get('/metrics', (req, res) => {
+      res.json({ 
+        uptime: process.uptime(),
+        memory: process.memoryUsage()
+      });
+    });
+
+    // Patterns
+    this.app.get('/patterns', (req, res) => {
+      res.json({ patterns: [] });
+    });
   }
 
-  route(method, path, handler) {
-    const key = `${method}:${path}`;
-    this.routes.set(key, handler);
-  }
-
-  async handleRequest(method, path, body) {
-    const key = `${method}:${path}`;
-    const handler = this.routes.get(key);
-    if (!handler) return { status: 404, body: { error: 'Not found' } };
-    
-    try {
-      const result = await handler(body);
-      return { status: 200, body: result };
-    } catch (error) {
-      return { status: 500, body: { error: error.message } };
-    }
-  }
-
-  async handleOrchestrate(body) {
-    return this.os.orchestrate(body);
-  }
-
-  async handleMetrics(body) {
-    return this.os.getMetrics();
-  }
-
-  async handlePatterns(body) {
-    return { count: this.os.patterns.length, patterns: this.os.patterns.slice(0, 10) };
-  }
-
-  async handleHealth(body) {
-    return {
-      status: 'healthy',
-      version: '0.12.0',
-      cycles: this.os.metrics.total_cycles
-    };
-  }
-
-  getRoutes() {
-    return Array.from(this.routes.keys());
+  start() {
+    this.app.listen(this.port, () => {
+      console.log(`\n🚀 TRIAGE OS running on http://localhost:${this.port}\n`);
+    });
   }
 }
 
-module.exports = APIServer;
+// Instancia y arranca
+const server = new APIServer(3000);
+server.start();
