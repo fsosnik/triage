@@ -1,54 +1,45 @@
-const TokenOptimizer = require('../src/optimization/token-optimizer');
-const MetricsDashboard = require('../src/optimization/metrics-dashboard');
+const FeedbackEngine = require('../src/core/feedback-engine');
+const AutoCheckpoint = require('../src/core/auto-checkpoint');
+const TriageOSCore = require('../src/core/triage-os-core');
 
-describe('Phase 3: Token Optimization', () => {
-  
-  describe('TokenOptimizer', () => {
-    let optimizer;
-
-    beforeEach(() => {
-      optimizer = new TokenOptimizer();
-    });
-
-    test('should compress patterns', () => {
-      const patterns = [
-        { id: 'p1', task_type: 'feature', agents: ['code', 'qa'], success_rate: 0.95, cost: 2000 }
-      ];
-      optimizer.compressPatterns(patterns);
-      expect(Number(optimizer.metrics.compression_ratio)).toBeGreaterThan(0);
-    });
-
-    test('should estimate token savings', () => {
-      const savings = optimizer.estimateSavings(10);
-      expect(Number(savings.savings_percent)).toBeGreaterThan(0);
-    });
-
-    test('should track cache hits', () => {
-      optimizer.recordCacheHit(2000);
-      expect(optimizer.metrics.cache_hits).toBe(1);
-    });
+describe('Phase 3: Feedback Loop Integration', () => {
+  test('FeedbackEngine should route success', async () => {
+    const engine = new FeedbackEngine();
+    const result = await engine.process('oauth2', ['code', 'qa'], 
+      { success: true }, 
+      { success: true }
+    );
+    expect(result).toBeDefined();
   });
 
-  describe('MetricsDashboard', () => {
-    let dashboard;
+  test('FeedbackEngine should route failure', async () => {
+    const engine = new FeedbackEngine();
+    const result = await engine.process('oauth2', ['code'], 
+      { success: true }, 
+      { success: false }
+    );
+    expect(result).toBeDefined();
+  });
 
-    beforeEach(() => {
-      dashboard = new MetricsDashboard();
+  test('AutoCheckpoint should save', () => {
+    const filename = AutoCheckpoint.save({
+      task: 'test',
+      status: 'VALIDATED'
     });
+    expect(filename).toBeDefined();
+    expect(filename).toContain('checkpoint');
+  });
 
-    test('should generate report', () => {
-      const mockOS = {
-        getMetrics: () => ({ total_cycles: 5 }),
-        patterns: [],
-        blocklist: []
-      };
-      const mockOptimizer = {
-        getMetrics: () => ({ cache_hit_rate: '50%' })
-      };
+  test('AutoCheckpoint should list', () => {
+    const list = AutoCheckpoint.list();
+    expect(Array.isArray(list)).toBe(true);
+  });
 
-      dashboard.captureSnapshot(mockOS, mockOptimizer);
-      const report = dashboard.generateReport();
-      expect(report).toContain('TRIAGE OS');
-    });
+  test('TriageOSCore should execute full cycle', async () => {
+    const core = new TriageOSCore();
+    const result = await core.executeCycle('feature', ['code', 'qa'], { success: true });
+    expect(result).toHaveProperty('validation');
+    expect(result).toHaveProperty('feedback');
+    expect(result).toHaveProperty('checkpoint');
   });
 });

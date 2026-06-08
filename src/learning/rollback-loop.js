@@ -64,6 +64,7 @@ class RollbackLoop {
     this.recordFailure(failureRecord);
 
     console.log(`\n✓ Rollback complete`);
+    return failureRecord;
   }
 
   penalizeAgents(failedAgents) {
