@@ -6,6 +6,7 @@ class APIServer {
     this.app = express();
     this.port = port;
     this.core = new TriageOSCore();
+    this.routes = [];
     this.setupMiddleware();
     this.setupRoutes();
   }
@@ -19,6 +20,7 @@ class APIServer {
     this.app.get('/health', (req, res) => {
       res.json({ status: 'ok', service: 'triage-os' });
     });
+    this.routes.push({ method: 'GET', path: '/health' });
 
     // Execute cycle
     this.app.post('/cycle', async (req, res) => {
@@ -30,19 +32,11 @@ class APIServer {
         res.status(500).json({ status: 'error', message: e.message });
       }
     });
+    this.routes.push({ method: 'POST', path: '/cycle' });
+  }
 
-    // Metrics
-    this.app.get('/metrics', (req, res) => {
-      res.json({ 
-        uptime: process.uptime(),
-        memory: process.memoryUsage()
-      });
-    });
-
-    // Patterns
-    this.app.get('/patterns', (req, res) => {
-      res.json({ patterns: [] });
-    });
+  getRoutes() {
+    return this.routes;
   }
 
   start() {
@@ -52,6 +46,11 @@ class APIServer {
   }
 }
 
-// Instancia y arranca
-const server = new APIServer(3000);
-server.start();
+// Exportar la clase
+module.exports = APIServer;
+
+// Solo levanta servidor si se ejecuta directamente
+if (require.main === module) {
+  const server = new APIServer(3000);
+  server.start();
+}
