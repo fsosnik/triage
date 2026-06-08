@@ -6,7 +6,7 @@ Medical classification paradigm for AI agents. Real validation. Continuous learn
 
 **128/128 tests passing** | **23 test suites** | **0 lint errors** | **Production-ready roadmap**
 
-> ⚠️ **Note**: This is an advanced MVP with solid architecture. See [AUDIT.md](#audit) for production readiness assessment.
+>  **Note**: This is an advanced MVP with solid architecture. See [AUDIT.md](#audit) for production readiness assessment.
 
 ---
 
@@ -84,7 +84,7 @@ npm start       # API on localhost:3000
 - Metrics collection
 - Learning from successes
 
-### 🚧 What's in Progress
+###  What's in Progress
 
 Per [Audit Report](./AUDITORIA_COMPLETA_SISTEMAS_AI_2026-06-08.md):
 
