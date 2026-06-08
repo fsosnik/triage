@@ -197,8 +197,8 @@
     "constraints": [],
     "steps": [],
     "created_at": "2026-06-08T16:28:33.770Z",
-    "last_used": "2026-06-08T16:38:41.311Z",
-    "reuse_count": 119
+    "last_used": "2026-06-08T16:56:36.834Z",
+    "reuse_count": 199
   },
   {
     "id": "pattern-1780936650079",
@@ -222,7 +222,57 @@
     "constraints": [],
     "steps": [],
     "created_at": "2026-06-08T16:37:30.079Z",
-    "last_used": "2026-06-08T16:38:41.335Z",
-    "reuse_count": 2
+    "last_used": "2026-06-08T16:56:37.260Z",
+    "reuse_count": 42
+  },
+  {
+    "id": "pattern-1780937795453",
+    "name": "test-cycle",
+    "category": "testing",
+    "task_type": "test-cycle",
+    "agents_used": [
+      "code",
+      "qa"
+    ],
+    "success_rate": 100,
+    "execution_time_ms": 0,
+    "tokens_avg": 0,
+    "tools": [
+      "npm",
+      "git",
+      "tsc",
+      "jest",
+      "eslint"
+    ],
+    "constraints": [],
+    "steps": [],
+    "created_at": "2026-06-08T16:56:35.453Z",
+    "last_used": "2026-06-08T16:56:35.453Z",
+    "reuse_count": 0
+  },
+  {
+    "id": "pattern-1780937797691",
+    "name": "test",
+    "category": "testing",
+    "task_type": "test",
+    "agents_used": [
+      "code",
+      "qa"
+    ],
+    "success_rate": 100,
+    "execution_time_ms": 0,
+    "tokens_avg": 0,
+    "tools": [
+      "npm",
+      "git",
+      "tsc",
+      "jest",
+      "eslint"
+    ],
+    "constraints": [],
+    "steps": [],
+    "created_at": "2026-06-08T16:56:37.691Z",
+    "last_used": "2026-06-08T16:56:37.691Z",
+    "reuse_count": 0
   }
 ]
