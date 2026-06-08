@@ -1,18 +1,7 @@
-class TriageOS {
-  constructor(config = {}) {
-    this.config = { mode: 'agentic', parallelism: true, ...config };
-    this.patterns = [];
-    this.metrics = { total_cycles: 0, success_rate: 0.88 };
-  }
-  classifyTaskType(task) {
-    if (task.includes('feature')) return 'feature';
-    if (task.includes('bug')) return 'bugfix';
-    if (task.includes('refactor')) return 'refactor';
-    return 'unknown';
-  }
-  selectAgents(task, context) {
-    return ['code', 'qa', 'risk'];
-  }
-  getMetrics() { return this.metrics; }
+classifyTaskType(task) {
+  const t = task.toLowerCase();
+  if (t.includes('refactor')) return 'refactor';  // Check FIRST
+  if (t.includes('bug') || t.includes('fix')) return 'bugfix';
+  if (t.includes('feature')) return 'feature';
+  return 'unknown';
 }
-module.exports = TriageOS;
