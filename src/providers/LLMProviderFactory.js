@@ -1,22 +1,19 @@
-const { AnthropicProvider } = require('./AnthropicProvider.js');
-const { OpenAIProvider } = require('./OpenAIProvider.js');
-const { GeminiProvider } = require('./GeminiProvider.js');
-const { OllamaProvider } = require('./OllamaProvider.js');
+const AnthropicProvider = require('./AnthropicProvider');
+const OpenAIProvider = require('./OpenAIProvider');
+const GeminiProvider = require('./GeminiProvider');
+const OllamaProvider = require('./OllamaProvider');
 
 class LLMProviderFactory {
-  static getProvider(name) {
-    const providers = {
-      anthropic: AnthropicProvider,
-      claude: AnthropicProvider,
-      openai: OpenAIProvider,
-      gemini: GeminiProvider,
-      ollama: OllamaProvider
-    };
-    return providers[name.toLowerCase()];
-  }
+  static providers = {
+    anthropic: AnthropicProvider,
+    claude: AnthropicProvider,
+    openai: OpenAIProvider,
+    gemini: GeminiProvider,
+    ollama: OllamaProvider
+  };
 
-  static createProvider(name, config) {
-    const Provider = this.getProvider(name);
+  static create(name, config) {
+    const Provider = this.providers[name.toLowerCase()];
     if (!Provider) throw new Error(`Unknown provider: ${name}`);
     return new Provider(config);
   }

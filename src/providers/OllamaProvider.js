@@ -1,13 +1,10 @@
-const { LLMProvider } = require('./LLMProvider.js');
-
-class OllamaProvider extends LLMProvider {
+class OllamaProvider {
   constructor(config = {}) {
-    super(config);
+    this.config = config;
+    this.name = 'ollama';
     this.model = config.model || 'llama2';
-    this.baseUrl = config.baseUrl || process.env.OLLAMA_BASE_URL || 'http://localhost:11434';
   }
-  async validate() { return true; }
-  async complete(prompt, options = {}) { return { text: 'mock' }; }
-  async embed(text) { return [0.1, 0.2]; }
+  getName() { return this.name; }
+  getModel() { return this.model; }
 }
-module.exports = { OllamaProvider };
+module.exports = OllamaProvider;
