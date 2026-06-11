@@ -66,6 +66,8 @@ config/.env
 .claude/knowledge/insights.json
 .claude/security/audit-log.json
 .claude/cli-config.json
+.claude/patterns/successes.json
+.claude/tenants/tenants.json
 
 # Keep patterns.json (learned knowledge)
 !.claude/knowledge/patterns.json
