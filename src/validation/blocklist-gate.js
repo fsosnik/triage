@@ -38,24 +38,11 @@ class BlocklistGate {
 
   matches(input, pattern) {
     try {
-      const patternValue = pattern.pattern;
-
-      // Handle RegExp objects
-      if (patternValue instanceof RegExp) {
-        return patternValue.test(input);
+      if (pattern.pattern.includes('/') || pattern.pattern.includes('[')) {
+        const regex = new RegExp(pattern.pattern);
+        return regex.test(input);
       }
-
-      // Handle string patterns that look like regex
-      if (typeof patternValue === 'string') {
-        if (patternValue.includes('/') || patternValue.includes('[') || patternValue.includes('(')) {
-          const regex = new RegExp(patternValue);
-          return regex.test(input);
-        }
-        // Simple string matching for non-regex patterns
-        return input.includes(patternValue);
-      }
-
-      return false;
+      return input.includes(pattern.pattern);
     } catch (err) {
       console.warn(`[BlocklistGate] Invalid pattern ${pattern.id}: ${err.message}`);
       return false;

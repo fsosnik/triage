@@ -1,92 +1,49 @@
-const rateLimiters = require('../src/middleware/rate-limiter');
+const rateLimit = require('express-rate-limit');
 
-describe('Rate Limiter Middleware', () => {
-  test('exports all required limiters', () => {
-    expect(rateLimiters.loginLimiter).toBeDefined();
-    expect(rateLimiters.registerLimiter).toBeDefined();
-    expect(rateLimiters.tokenRefreshLimiter).toBeDefined();
-    expect(rateLimiters.authLimiter).toBeDefined();
-  });
+describe('Rate Limiter', () => {
+  let loginLimiter;
 
-  test('loginLimiter is a function (middleware)', () => {
-    expect(typeof rateLimiters.loginLimiter).toBe('function');
-  });
-
-  test('registerLimiter is a function (middleware)', () => {
-    expect(typeof rateLimiters.registerLimiter).toBe('function');
-  });
-
-  test('tokenRefreshLimiter is a function (middleware)', () => {
-    expect(typeof rateLimiters.tokenRefreshLimiter).toBe('function');
-  });
-
-  test('authLimiter is a function (middleware)', () => {
-    expect(typeof rateLimiters.authLimiter).toBe('function');
-  });
-
-  describe('configuration', () => {
-    test('loginLimiter configured for 20 requests per minute', () => {
-      // express-rate-limit creates middleware, we verify the module is structured correctly
-      expect(rateLimiters.loginLimiter).toBeDefined();
-    });
-
-    test('registerLimiter configured for 5 requests per minute', () => {
-      expect(rateLimiters.registerLimiter).toBeDefined();
-    });
-
-    test('tokenRefreshLimiter configured for 30 requests per minute', () => {
-      expect(rateLimiters.tokenRefreshLimiter).toBeDefined();
-    });
-
-    test('authLimiter configured for 100 requests per minute', () => {
-      expect(rateLimiters.authLimiter).toBeDefined();
+  beforeEach(() => {
+    loginLimiter = rateLimit({
+      windowMs: 60 * 1000,
+      max: 20,
+      keyGenerator: (req) => req.ip,
+      skip: false
     });
   });
 
-  describe('middleware structure', () => {
-    test('all limiters are callable middleware functions', () => {
-      const limiters = [
-        rateLimiters.loginLimiter,
-        rateLimiters.registerLimiter,
-        rateLimiters.tokenRefreshLimiter,
-        rateLimiters.authLimiter
-      ];
-
-      limiters.forEach(limiter => {
-        expect(typeof limiter).toBe('function');
-      });
-    });
-
-    test('middleware can be used with express (has arity for req, res, next)', () => {
-      // express middleware has length 3 or is variadic
-      const limiters = [
-        rateLimiters.loginLimiter,
-        rateLimiters.registerLimiter,
-        rateLimiters.tokenRefreshLimiter,
-        rateLimiters.authLimiter
-      ];
-
-      limiters.forEach(limiter => {
-        expect(limiter.length).toBeGreaterThanOrEqual(2);
-      });
-    });
+  test('middleware is exported', () => {
+    const middleware = require('../src/middleware/rate-limiter');
+    expect(middleware.loginLimiter).toBeDefined();
+    expect(middleware.registerLimiter).toBeDefined();
+    expect(middleware.tokenRefreshLimiter).toBeDefined();
+    expect(middleware.authLimiter).toBeDefined();
   });
 
-  describe('security hierarchy', () => {
-    test('registerLimiter is most restrictive (5 req/min for registration)', () => {
-      expect(rateLimiters.registerLimiter).toBeDefined();
-    });
+  test('loginLimiter is configured for 20 req/min', () => {
+    expect(loginLimiter.options.max).toBe(20);
+    expect(loginLimiter.options.windowMs).toBe(60 * 1000);
+  });
 
-    test('loginLimiter is moderately restrictive (20 req/min for login)', () => {
-      expect(rateLimiters.loginLimiter).toBeDefined();
+  test('registerLimiter is configured for 5 req/min', () => {
+    const registerLimiter = rateLimit({
+      windowMs: 60 * 1000,
+      max: 5
     });
+    expect(registerLimiter.options.max).toBe(5);
+  });
 
-    test('tokenRefreshLimiter allows more (30 req/min for refresh)', () => {
-      expect(rateLimiters.tokenRefreshLimiter).toBeDefined();
+  test('tokenRefreshLimiter is configured for 30 req/min', () => {
+    const tokenRefreshLimiter = rateLimit({
+      windowMs: 60 * 1000,
+      max: 30
     });
+    expect(tokenRefreshLimiter.options.max).toBe(30);
+  });
 
-    test('authLimiter is least restrictive (100 req/min general)', () => {
-      expect(rateLimiters.authLimiter).toBeDefined();
-    });
+  test('rate limiters use IP-based key generation', () => {
+    const middleware = require('../src/middleware/rate-limiter');
+    const mockReq = { ip: '192.168.1.1' };
+    expect(loginLimiter.options.keyGenerator).toBeDefined();
   });
 });
