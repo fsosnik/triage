@@ -1,0 +1,81 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 28px; font-weight: bold; fill: #00d4ff; }
+      .box-title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #fff; }
+      .box-desc { font-family: 'Monaco', monospace; font-size: 12px; fill: #a0aec0; }
+      .center-box { fill: #0f1419; stroke: #00d4ff; stroke-width: 3; }
+      .product-box { fill: #1a1f2e; stroke: #48bb78; stroke-width: 2; }
+      .arrow { stroke: #00d4ff; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .connection { stroke: #48bb78; stroke-width: 2; stroke-dasharray: 5,5; fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#00d4ff"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="600" fill="#0f1419"/>
+
+  <!-- Title -->
+  <text x="500" y="40" class="title" text-anchor="middle">Bridger4u Ecosystem</text>
+
+  <!-- Center: Bridger4u -->
+  <circle cx="500" cy="150" r="50" class="center-box"/>
+  <text x="500" y="145" class="box-title" text-anchor="middle" font-size="14">Bridger4u</text>
+  <text x="500" y="165" class="box-desc" text-anchor="middle" font-size="11">AI Systems</text>
+
+  <!-- Product 1: TRIAGE OS (Top Left) -->
+  <rect x="100" y="80" width="180" height="100" class="product-box" rx="8"/>
+  <text x="190" y="110" class="box-title" text-anchor="middle">TRIAGE OS</text>
+  <text x="190" y="130" class="box-desc" text-anchor="middle">Evidence-Driven</text>
+  <text x="190" y="145" class="box-desc" text-anchor="middle">Agentic Execution</text>
+  <text x="190" y="165" class="box-desc" text-anchor="middle">4-Agent Orchestration</text>
+
+  <!-- Product 2: Enterprise AI (Top Right) -->
+  <rect x="720" y="80" width="180" height="100" class="product-box" rx="8"/>
+  <text x="810" y="110" class="box-title" text-anchor="middle">Enterprise AI</text>
+  <text x="810" y="130" class="box-desc" text-anchor="middle">RAG Systems</text>
+  <text x="810" y="145" class="box-desc" text-anchor="middle">Multi-LLM Integration</text>
+  <text x="810" y="165" class="box-desc" text-anchor="middle">Knowledge Graphs</text>
+
+  <!-- Product 3: Orkest (Bottom Left) -->
+  <rect x="100" y="370" width="180" height="100" class="product-box" rx="8"/>
+  <text x="190" y="400" class="box-title" text-anchor="middle">Orkest</text>
+  <text x="190" y="420" class="box-desc" text-anchor="middle">Business Automation</text>
+  <text x="190" y="435" class="box-desc" text-anchor="middle">Workflow Orchestration</text>
+  <text x="190" y="450" class="box-desc" text-anchor="middle">AI-Powered Decisions</text>
+
+  <!-- Product 4: Halo (Bottom Right) -->
+  <rect x="720" y="370" width="180" height="100" class="product-box" rx="8"/>
+  <text x="810" y="400" class="box-title" text-anchor="middle">Halo</text>
+  <text x="810" y="420" class="box-desc" text-anchor="middle">Multi-Tenant SaaS</text>
+  <text x="810" y="435" class="box-desc" text-anchor="middle">Enterprise Governance</text>
+  <text x="810" y="450" class="box-desc" text-anchor="middle">Scalable Foundation</text>
+
+  <!-- Connections -->
+  <path d="M 280 130 L 450 150" class="arrow"/>
+  <path d="M 720 130 L 550 150" class="arrow"/>
+  <path d="M 280 370 L 450 180" class="arrow"/>
+  <path d="M 720 370 L 550 180" class="arrow"/>
+
+  <!-- Internal connections -->
+  <path d="M 190 180 L 190 370" class="connection"/>
+  <path d="M 810 180 L 810 370" class="connection"/>
+  <path d="M 190 420 L 810 420" class="connection"/>
+
+  <!-- Legend -->
+  <g>
+    <text x="50" y="560" class="box-desc" font-size="13">Core:</text>
+    <text x="50" y="580" class="box-desc" font-size="12">✓ Evidence-based execution</text>
+    <text x="50" y="595" class="box-desc" font-size="12">✓ Zero hallucination validation</text>
+
+    <text x="400" y="560" class="box-desc" font-size="13">Integration:</text>
+    <text x="400" y="580" class="box-desc" font-size="12">✓ Shared governance layer (Halo)</text>
+    <text x="400" y="595" class="box-desc" font-size="12">✓ Unified enterprise standards</text>
+
+    <text x="750" y="560" class="box-desc" font-size="13">Deployment:</text>
+    <text x="750" y="580" class="box-desc" font-size="12">✓ Production-ready components</text>
+    <text x="750" y="595" class="box-desc" font-size="12">✓ Enterprise compliance</text>
+  </g>
+</svg>

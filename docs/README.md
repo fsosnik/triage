@@ -1,32 +1,74 @@
-# TRIAGE OS Documentation
+# Bridger4u
 
-**Start here**: [Quick Start](QUICK_START.md) (5 minutes)
+> Enterprise AI Systems & Business Automation
 
-## Documentation Map
+## Mission
 
-| Need | Document |
-|------|----------|
-| 5 min intro | [Quick Start](QUICK_START.md) |
-| How to use | [User Manual](USER_MANUAL.md) |
-| All methods | [API Guide](API_GUIDE.md) |
-| How it works | [Architecture](ARCHITECTURE.md) |
-| Deploy to prod | [Deployment](DEPLOYMENT.md) |
-| Something broken? | [Troubleshooting](TROUBLESHOOTING.md) |
-| Questions? | [FAQ](FAQ.md) |
+Building evidence-driven agentic systems that solve real enterprise problems.
 
-## Key Files
+## Products
 
-- `docs/` — All documentation
-- `src/core/os.js` — Main orchestrator
-- `src/server/dashboard-server.js` — Web interface
-- `tests/` — 117 tests (98% pass)
+- **TRIAGE OS** — Evidence-Driven Agentic Execution  
+  Evidence-based agent orchestration framework with validation gates and learning loops
 
-## Status
+- **Enterprise AI Portfolio** — Production RAG & Multi-LLM Patterns  
+  Reference implementations for knowledge graphs, semantic search, multi-provider LLM integration
 
-- ✅ 30 phases complete
-- ✅ v1.0.0 released
-- ✅ 117/119 tests passing
-- ✅ Production ready
-- ✅ Fully documented
+- **Orkest** — AI-Powered Business Operating Platform  
+  Workflow automation with intelligent routing, decision making, and process orchestration
 
-[GitHub](https://github.com/fsosnik/triage) | [Issues](https://github.com/fsosnik/triage/issues) | [Discussions](https://github.com/fsosnik/triage/discussions)
+- **Halo** — Multi-Tenant SaaS Foundation  
+  Enterprise governance, compliance, and scalable architecture for B2B applications
+
+## Case Studies
+
+Real problems. Real solutions. Real results.
+
+See [7 industry case studies](./CASE_STUDIES.md):
+- Customer Support Automation (12x faster, $1.2M savings)
+- Enterprise Code Review (12x faster, zero critical bugs)
+- Financial Reports (3x faster, 20x accuracy, SOX compliant)
+- Insurance Claims Triage (78% automation, 0.2% false denials)
+- Product Knowledge Automation (99.2% accuracy, +22% repeat)
+- Legal Contract Review (90% time reduction, $500K profit)
+- Manufacturing Maintenance (0.5% downtime, 35% savings)
+
+## Why Bridger4u
+
+✅ **Evidence-driven** — Code execution, real validation, zero hallucination  
+✅ **Enterprise-grade** — Multi-tenant, governance, compliance  
+✅ **Production-ready** — Deploy in 4-6 weeks  
+✅ **Real results** — 8-12x improvements, 35-60% cost reduction  
+
+## Services
+
+- 🤝 **Partnerships** — AI-driven automation in enterprise
+- 👥 **Consulting** — Architecture & implementation guidance
+- 🎓 **Advisory** — AI governance & enterprise frameworks
+- 💼 **Clients** — Custom agentic systems & workflow automation
+
+## Tech Stack
+
+- **AI/ML**: Claude (Anthropic), GPT-4, Gemini, Ollama
+- **Architecture**: Agentic systems, knowledge graphs, RAG
+- **Infrastructure**: Node.js, TypeScript, Supabase, Vercel
+- **Automation**: Workflow orchestration, event-driven processing
+
+## Get Started
+
+1. **Explore case studies** → [CASE_STUDIES.md](./CASE_STUDIES.md)
+2. **Check repos** → [fsosnik on GitHub](https://github.com/fsosnik)
+3. **Schedule call** → [hey@sosnik.com.ar](mailto:hey@sosnik.com.ar)
+
+## Contact
+
+- 🌐 **Website**: [bridger4u.com](https://bridger4u.com)
+- 📧 **Email**: [hey@sosnik.com.ar](mailto:hey@sosnik.com.ar)
+- 💼 **LinkedIn**: [@fsosnik](https://linkedin.com/in/fsosnik)
+- 🐙 **GitHub**: [@fsosnik](https://github.com/fsosnik)
+
+---
+
+**Building enterprise-grade AI systems with evidence-based validation.**
+
+*Last updated: June 5, 2026*

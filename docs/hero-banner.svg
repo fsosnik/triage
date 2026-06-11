@@ -1,0 +1,56 @@
+<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1419;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1f2e;stop-opacity:1" />
+    </linearGradient>
+    <style>
+      .title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 48px; font-weight: bold; fill: #00d4ff; }
+      .subtitle { font-family: 'Monaco', monospace; font-size: 18px; fill: #a0aec0; }
+      .accent { font-size: 16px; fill: #48bb78; }
+      .badge { font-family: 'Monaco', monospace; font-size: 12px; fill: #f6ad55; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#bgGradient)"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="4" height="300" fill="#00d4ff"/>
+
+  <!-- Content -->
+  <text x="50" y="80" class="title">Fernando Sosnik</text>
+  <text x="50" y="120" class="subtitle">Founder & Technology Director @ Bridger4u</text>
+
+  <!-- Specializations -->
+  <text x="50" y="165" class="accent">🤖 Agentic Systems</text>
+  <text x="350" y="165" class="accent">🔄 Workflow Automation</text>
+  <text x="700" y="165" class="accent">📊 Enterprise AI</text>
+
+  <!-- Key message -->
+  <text x="50" y="220" class="subtitle" font-size="16">Evidence-Driven Architecture | Zero Hallucination | Real Metrics</text>
+
+  <!-- Badges -->
+  <g>
+    <!-- TRIAGE badge -->
+    <rect x="50" y="240" width="120" height="30" fill="#1a365d" stroke="#00d4ff" stroke-width="2" rx="5"/>
+    <text x="110" y="262" class="badge" text-anchor="middle">TRIAGE OS</text>
+
+    <!-- Enterprise badge -->
+    <rect x="190" y="240" width="130" height="30" fill="#1a365d" stroke="#00d4ff" stroke-width="2" rx="5"/>
+    <text x="255" y="262" class="badge" text-anchor="middle">Enterprise AI</text>
+
+    <!-- Orkest badge -->
+    <rect x="340" y="240" width="120" height="30" fill="#1a365d" stroke="#00d4ff" stroke-width="2" rx="5"/>
+    <text x="400" y="262" class="badge" text-anchor="middle">Orkest</text>
+
+    <!-- Halo badge -->
+    <rect x="480" y="240" width="110" height="30" fill="#1a365d" stroke="#00d4ff" stroke-width="2" rx="5"/>
+    <text x="535" y="262" class="badge" text-anchor="middle">Halo</text>
+  </g>
+
+  <!-- CTA -->
+  <text x="1100" y="160" class="subtitle" font-size="14" text-anchor="end">Building</text>
+  <text x="1100" y="190" class="subtitle" font-size="14" text-anchor="end">Enterprise-Grade</text>
+  <text x="1100" y="220" class="subtitle" font-size="14" text-anchor="end">AI Systems</text>
+</svg>

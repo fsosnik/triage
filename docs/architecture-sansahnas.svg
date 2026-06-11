@@ -1,0 +1,73 @@
+<svg width="100%" viewBox="0 0 680 450" role="img">
+<title>SansaHnas: Property Management Platform</title>
+
+<text style="font-size: 14px; font-weight: 500;" x="340" y="30" text-anchor="middle" fill="#26215C">SansaHnas: Property & Tenant Management</text>
+
+<!-- Core Modules -->
+<g>
+<rect x="40" y="60" width="130" height="90" rx="8" fill="#B5D4F4" stroke="#185FA5" stroke-width="0.5"/>
+<text style="font-size: 13px; font-weight: 500;" x="105" y="90" text-anchor="middle" fill="#042C53">Tenant Mgmt</text>
+<text style="font-size: 11px;" x="105" y="110" text-anchor="middle" fill="#0C447C">Profiles</text>
+<text style="font-size: 11px;" x="105" y="125" text-anchor="middle" fill="#0C447C">Communication</text>
+<text style="font-size: 11px;" x="105" y="140" text-anchor="middle" fill="#0C447C">History</text>
+</g>
+
+<g>
+<rect x="190" y="60" width="130" height="90" rx="8" fill="#C0DD97" stroke="#3B6D11" stroke-width="0.5"/>
+<text style="font-size: 13px; font-weight: 500;" x="255" y="90" text-anchor="middle" fill="#173404">Lease Mgmt</text>
+<text style="font-size: 11px;" x="255" y="110" text-anchor="middle" fill="#27500A">Terms</text>
+<text style="font-size: 11px;" x="255" y="125" text-anchor="middle" fill="#27500A">Renewals</text>
+<text style="font-size: 11px;" x="255" y="140" text-anchor="middle" fill="#27500A">Termination</text>
+</g>
+
+<g>
+<rect x="340" y="60" width="130" height="90" rx="8" fill="#EF9F27" stroke="#854F0B" stroke-width="0.5"/>
+<text style="font-size: 13px; font-weight: 500;" x="405" y="90" text-anchor="middle" fill="#412402">Maintenance</text>
+<text style="font-size: 11px;" x="405" y="110" text-anchor="middle" fill="#632806">Ticketing</text>
+<text style="font-size: 11px;" x="405" y="125" text-anchor="middle" fill="#632806">Routing</text>
+<text style="font-size: 11px;" x="405" y="140" text-anchor="middle" fill="#632806">Tracking</text>
+</g>
+
+<g>
+<rect x="490" y="60" width="130" height="90" rx="8" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
+<text style="font-size: 13px; font-weight: 500;" x="555" y="90" text-anchor="middle" fill="#04342C">Financial</text>
+<text style="font-size: 11px;" x="555" y="110" text-anchor="middle" fill="#085041">Rent tracking</text>
+<text style="font-size: 11px;" x="555" y="125" text-anchor="middle" fill="#085041">Expenses</text>
+<text style="font-size: 11px;" x="555" y="140" text-anchor="middle" fill="#085041">Reports</text>
+</g>
+
+<!-- User Interfaces -->
+<g>
+<text style="font-size: 14px; font-weight: 500;" x="340" y="210" text-anchor="middle" fill="#26215C">User Interfaces</text>
+</g>
+
+<g>
+<rect x="100" y="240" width="180" height="70" rx="8" fill="#E8D1F5" stroke="#534AB7" stroke-width="0.5"/>
+<text style="font-size: 13px; font-weight: 500;" x="190" y="265" text-anchor="middle" fill="#26215C">Manager Dashboard</text>
+<text style="font-size: 11px;" x="190" y="283" text-anchor="middle" fill="#3C3489">All properties, tenants</text>
+<text style="font-size: 11px;" x="190" y="298" text-anchor="middle" fill="#3C3489">Financials overview</text>
+</g>
+
+<g>
+<rect x="300" y="240" width="180" height="70" rx="8" fill="#CECBF6" stroke="#534AB7" stroke-width="0.5"/>
+<text style="font-size: 13px; font-weight: 500;" x="390" y="265" text-anchor="middle" fill="#26215C">Owner Portal</text>
+<text style="font-size: 11px;" x="390" y="283" text-anchor="middle" fill="#3C3489">Portfolio view</text>
+<text style="font-size: 11px;" x="390" y="298" text-anchor="middle" fill="#3C3489">Payouts</text>
+</g>
+
+<g>
+<rect x="500" y="240" width="180" height="70" rx="8" fill="#B5D4F4" stroke="#185FA5" stroke-width="0.5"/>
+<text style="font-size: 13px; font-weight: 500;" x="590" y="265" text-anchor="middle" fill="#042C53">Tenant Portal</text>
+<text style="font-size: 11px;" x="590" y="283" text-anchor="middle" fill="#0C447C">Lease info</text>
+<text style="font-size: 11px;" x="590" y="298" text-anchor="middle" fill="#0C447C">Maintenance requests</text>
+</g>
+
+<!-- Results -->
+<g>
+<rect x="80" y="350" width="520" height="80" rx="8" fill="#E5F3E0" stroke="#3B6D11" stroke-width="2"/>
+<text style="font-size: 13px; font-weight: 500;" x="340" y="375" text-anchor="middle" fill="#173404">Live in Production: 500 units | 12 properties | 99.2% uptime | 4.6/5 stars</text>
+<text style="font-size: 11px;" x="340" y="395" text-anchor="middle" fill="#27500A">Tech: React + TypeScript / PHP Laravel</text>
+<text style="font-size: 11px;" x="340" y="410" text-anchor="middle" fill="#27500A">2.3-day average maintenance ticket resolution</text>
+</g>
+
+</svg>
