@@ -1,0 +1,118 @@
+<svg width="100%" viewBox="0 0 1200 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="1000" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="600" y="50" font-size="32" font-weight="bold" text-anchor="middle" fill="#ffffff">
+    TRIAGE OS Reconnaissance — P4.0 → Production
+  </text>
+  
+  <!-- Current State Section -->
+  <text x="100" y="110" font-size="24" font-weight="bold" fill="#ffffff">Current State</text>
+  
+  <!-- Tests Box -->
+  <rect x="40" y="130" width="280" height="100" rx="12" fill="#1d5d1d" stroke="#4ade80" stroke-width="2"/>
+  <text x="180" y="170" font-size="20" font-weight="bold" text-anchor="middle" fill="#4ade80">128/128 Tests</text>
+  <text x="180" y="195" font-size="14" text-anchor="middle" fill="#86efac">Validated, phase 4.0</text>
+  
+  <!-- Auth Box -->
+  <rect x="40" y="250" width="280" height="100" rx="12" fill="#0f4a7d" stroke="#60a5fa" stroke-width="2"/>
+  <text x="180" y="290" font-size="20" font-weight="bold" text-anchor="middle" fill="#60a5fa">bcrypt + JWT</text>
+  <text x="180" y="315" font-size="14" text-anchor="middle" fill="#93c5fd">Upgraded, real validators</text>
+  
+  <!-- Graphify Box -->
+  <rect x="40" y="370" width="280" height="100" rx="12" fill="#1d5d3d" stroke="#4ade80" stroke-width="2"/>
+  <text x="180" y="410" font-size="20" font-weight="bold" text-anchor="middle" fill="#4ade80">Graphify + Ruflo</text>
+  <text x="180" y="435" font-size="14" text-anchor="middle" fill="#86efac">Integrated in core</text>
+  
+  <!-- Identified Gaps Section -->
+  <text x="460" y="110" font-size="24" font-weight="bold" fill="#ffffff">Identified Gaps</text>
+  
+  <!-- Gap 1: Git -->
+  <rect x="400" y="130" width="280" height="120" rx="12" fill="#6b3d1f" stroke="#d97706" stroke-width="2"/>
+  <text x="540" y="170" font-size="18" font-weight="bold" text-anchor="middle" fill="#fcd34d">Git HEAD Issues</text>
+  <text x="540" y="195" font-size="12" text-anchor="middle" fill="#fde68a">orkest, halo,</text>
+  <text x="540" y="210" font-size="12" text-anchor="middle" fill="#fde68a">sansahnas, enterprise</text>
+  <text x="540" y="230" font-size="12" text-anchor="middle" fill="#fde68a">No branch output</text>
+  
+  <!-- Gap 2: Validation -->
+  <rect x="400" y="270" width="280" height="100" rx="12" fill="#6b3d1f" stroke="#d97706" stroke-width="2"/>
+  <text x="540" y="310" font-size="18" font-weight="bold" text-anchor="middle" fill="#fcd34d">No Live Validation</text>
+  <text x="540" y="335" font-size="12" text-anchor="middle" fill="#fde68a">Blocklist unimplemented</text>
+  
+  <!-- Gap 3: Rate Limiting -->
+  <rect x="400" y="390" width="280" height="100" rx="12" fill="#6b3d1f" stroke="#d97706" stroke-width="2"/>
+  <text x="540" y="430" font-size="18" font-weight="bold" text-anchor="middle" fill="#fcd34d">Rate Limiting</text>
+  <text x="540" y="455" font-size="12" text-anchor="middle" fill="#fde68a">Missing in auth flow</text>
+  
+  <!-- Workflow Phases Section -->
+  <text x="880" y="110" font-size="24" font-weight="bold" fill="#ffffff">Workflow Phases</text>
+  
+  <!-- W1 Box -->
+  <rect x="820" y="130" width="280" height="100" rx="12" fill="#5b2d8f" stroke="#a78bfa" stroke-width="2"/>
+  <text x="960" y="170" font-size="18" font-weight="bold" text-anchor="middle" fill="#d8b4fe">W1: Git Healing</text>
+  <text x="960" y="195" font-size="12" text-anchor="middle" fill="#e9d5ff">Resolve HEAD issues</text>
+  
+  <!-- W2 Box -->
+  <rect x="820" y="250" width="280" height="100" rx="12" fill="#5b2d8f" stroke="#a78bfa" stroke-width="2"/>
+  <text x="960" y="290" font-size="18" font-weight="bold" text-anchor="middle" fill="#d8b4fe">W2: Blocklist</text>
+  <text x="960" y="315" font-size="12" text-anchor="middle" fill="#e9d5ff">Implement validation</text>
+  
+  <!-- W3 Box -->
+  <rect x="820" y="370" width="280" height="100" rx="12" fill="#5b2d8f" stroke="#a78bfa" stroke-width="2"/>
+  <text x="960" y="410" font-size="18" font-weight="bold" text-anchor="middle" fill="#d8b4fe">W3: Rate Limit</text>
+  <text x="960" y="435" font-size="12" text-anchor="middle" fill="#e9d5ff">Auth middleware</text>
+  
+  <!-- Orchestration Section -->
+  <line x1="50" y1="520" x2="1150" y2="520" stroke="#404040" stroke-width="1"/>
+  
+  <text x="600" y="570" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">
+    Orchestrated Workflows — Parallel Execution
+  </text>
+  
+  <!-- Core OS Box -->
+  <rect x="350" y="600" width="500" height="70" rx="12" fill="#0f4a7d" stroke="#60a5fa" stroke-width="2"/>
+  <text x="600" y="635" font-size="18" font-weight="bold" text-anchor="middle" fill="#60a5fa">Core OS Enrutador</text>
+  <text x="600" y="655" font-size="12" text-anchor="middle" fill="#93c5fd">Decides → Validates → Learns</text>
+  
+  <!-- Arrows from Core OS -->
+  <line x1="450" y1="670" x2="300" y2="730" stroke="#404040" stroke-width="2"/>
+  <line x1="600" y1="670" x2="600" y2="730" stroke="#404040" stroke-width="2"/>
+  <line x1="750" y1="670" x2="900" y2="730" stroke="#404040" stroke-width="2"/>
+  
+  <!-- W-Code Box -->
+  <rect x="80" y="730" width="440" height="120" rx="12" fill="#1d5d3d" stroke="#4ade80" stroke-width="2"/>
+  <text x="300" y="765" font-size="18" font-weight="bold" text-anchor="middle" fill="#4ade80">W-Code</text>
+  <text x="300" y="790" font-size="12" text-anchor="middle" fill="#86efac">Fix git repos</text>
+  <text x="300" y="805" font-size="12" text-anchor="middle" fill="#86efac">Validate output</text>
+  <text x="300" y="820" font-size="12" text-anchor="middle" fill="#86efac">Commit + push</text>
+  
+  <!-- W-QA Box -->
+  <rect x="380" y="730" width="440" height="120" rx="12" fill="#6b3d1f" stroke="#d97706" stroke-width="2"/>
+  <text x="600" y="765" font-size="18" font-weight="bold" text-anchor="middle" fill="#fcd34d">W-QA</text>
+  <text x="600" y="790" font-size="12" text-anchor="middle" fill="#fde68a">Security audit</text>
+  <text x="600" y="805" font-size="12" text-anchor="middle" fill="#fde68a">Blocklist patterns</text>
+  <text x="600" y="820" font-size="12" text-anchor="middle" fill="#fde68a">Tests + coverage</text>
+  
+  <!-- W-Deploy Box -->
+  <rect x="680" y="730" width="440" height="120" rx="12" fill="#8b6f1f" stroke="#eab308" stroke-width="2"/>
+  <text x="900" y="765" font-size="18" font-weight="bold" text-anchor="middle" fill="#facc15">W-Deploy</text>
+  <text x="900" y="790" font-size="12" text-anchor="middle" fill="#fef08a">Verify production</text>
+  <text x="900" y="805" font-size="12" text-anchor="middle" fill="#fef08a">Rate limiting</text>
+  <text x="900" y="820" font-size="12" text-anchor="middle" fill="#fef08a">Monitoring setup</text>
+  
+  <!-- Convergence arrows -->
+  <line x1="300" y1="850" x2="500" y2="890" stroke="#404040" stroke-width="2"/>
+  <line x1="600" y1="850" x2="600" y2="890" stroke="#404040" stroke-width="2"/>
+  <line x1="900" y1="850" x2="700" y2="890" stroke="#404040" stroke-width="2"/>
+  
+  <!-- Validation Gate -->
+  <rect x="350" y="890" width="500" height="70" rx="12" fill="#1d5d1d" stroke="#4ade80" stroke-width="2"/>
+  <text x="600" y="925" font-size="18" font-weight="bold" text-anchor="middle" fill="#4ade80">Validation Gate</text>
+  <text x="600" y="945" font-size="12" text-anchor="middle" fill="#86efac">Production live? ✓ → Learning Loop</text>
+  
+  <!-- Status line -->
+  <text x="100" y="990" font-size="11" fill="#808080">
+    Status: P4.0 validated (128/128 tests) • Audit: 4.9→6.5/10 • Next: W1 (Git), W2 (Blocklist), W3 (Rate limit)
+  </text>
+</svg>
