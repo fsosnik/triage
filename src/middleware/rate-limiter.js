@@ -1,10 +1,13 @@
 const rateLimit = require('express-rate-limit');
 
+// Usar el helper IPv6-safe incorporado en express-rate-limit
+const { ipKeyGenerator } = require('express-rate-limit');
+
 const loginLimiter = rateLimit({
   windowMs: 60 * 1000,
   max: 20,
+  keyGenerator: ipKeyGenerator,
   message: 'Too many login attempts.',
-  keyGenerator: (req) => req.ip,
   standardHeaders: true,
   legacyHeaders: false
 });
@@ -12,8 +15,8 @@ const loginLimiter = rateLimit({
 const registerLimiter = rateLimit({
   windowMs: 60 * 1000,
   max: 5,
+  keyGenerator: ipKeyGenerator,
   message: 'Too many registration attempts.',
-  keyGenerator: (req) => req.ip,
   standardHeaders: true,
   legacyHeaders: false
 });
@@ -21,8 +24,8 @@ const registerLimiter = rateLimit({
 const tokenRefreshLimiter = rateLimit({
   windowMs: 60 * 1000,
   max: 30,
+  keyGenerator: ipKeyGenerator,
   message: 'Too many token refresh attempts.',
-  keyGenerator: (req) => req.ip,
   standardHeaders: true,
   legacyHeaders: false
 });
@@ -30,8 +33,8 @@ const tokenRefreshLimiter = rateLimit({
 const authLimiter = rateLimit({
   windowMs: 60 * 1000,
   max: 100,
+  keyGenerator: ipKeyGenerator,
   message: 'Too many auth attempts.',
-  keyGenerator: (req) => req.ip,
   standardHeaders: true,
   legacyHeaders: false
 });
