@@ -197,8 +197,8 @@
     "constraints": [],
     "steps": [],
     "created_at": "2026-06-08T16:28:33.770Z",
-    "last_used": "2026-06-11T13:43:27.060Z",
-    "reuse_count": 1152
+    "last_used": "2026-06-11T13:55:38.147Z",
+    "reuse_count": 1374
   },
   {
     "id": "pattern-1780936650079",
@@ -360,5 +360,45 @@
     "duration": 0.974,
     "timestamp": "2026-06-11T13:37:54.594Z",
     "evidence_count": 4
+  },
+  {
+    "pattern_id": "phase-1-complete-2026-06-11",
+    "status": "PRODUCTION_READY",
+    "workflows": [
+      "W1",
+      "W2",
+      "W3",
+      "W4",
+      "W5"
+    ],
+    "timestamp": "2026-06-11T13:46:01.934Z"
+  },
+  {
+    "pattern_id": "W5-success",
+    "workflow": "W5",
+    "status": "VALIDATED",
+    "duration": 0.224,
+    "timestamp": "2026-06-11T13:46:02.127Z",
+    "evidence_count": 5
+  },
+  {
+    "pattern_id": "phase-1-complete-2026-06-11",
+    "status": "PRODUCTION_READY",
+    "workflows": [
+      "W1",
+      "W2",
+      "W3",
+      "W4",
+      "W5"
+    ],
+    "timestamp": "2026-06-11T13:47:13.953Z"
+  },
+  {
+    "pattern_id": "W5-success",
+    "workflow": "W5",
+    "status": "VALIDATED",
+    "duration": 0.854,
+    "timestamp": "2026-06-11T13:47:14.777Z",
+    "evidence_count": 5
   }
 ]
